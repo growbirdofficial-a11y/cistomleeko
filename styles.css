@@ -53,7 +53,7 @@ body {
 .hero {
   position: relative;
   z-index: 1;
-  background: linear-gradient(to bottom, #0A1D37, #5BC0EB);
+  background: linear-gradient(to bottom, #aadef8, #0e3d4f);
 }
 
 
