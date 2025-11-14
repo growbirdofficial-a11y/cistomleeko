@@ -66,17 +66,20 @@
     }
 
     .contact-form input,
-    .contact-form textarea {
+    .contact-form textarea,
+    .contact-form select {
       width: 100%;
       padding: 12px 15px;
       border-radius: 8px;
       border: 1px solid #cfe4f6;
       margin-bottom: 15px;
       font-size: 1rem;
+      box-sizing: border-box;
     }
 
     .contact-form input:focus,
-    .contact-form textarea:focus {
+    .contact-form textarea:focus,
+    .contact-form select:focus {
       outline: none;
       border-color: #5bc0eb;
       box-shadow: 0 0 5px #a7ddfa;
@@ -140,17 +143,17 @@
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
         </div>
+
   <!-- Header -->
   <header class="header">
     <nav class="nav">
       <div class="logo">
-                
         <a href="index.html" class="logo">
-  <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 60px;">
-</a>
+          <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 60px;">
+        </a>
       </div>
       <div class="nav-links">
-          <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="ourstory.html">Our Story</a>
         <a href="contactus.html">Contact</a>
@@ -173,10 +176,40 @@
         <p><strong>Address:</strong> 123 Siberian Valley Road, Novosibirsk, Russia</p>
       </div>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="6" required></textarea>
+      <!-- CONTACT FORM WITH FORMSUBMIT + PHONE + COUNTRY -->
+      <form class="contact-form" action="https://formsubmit.co/offerindiabusiness@gmail.com" method="POST">
+        
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Email Subject -->
+        <input type="hidden" name="_subject" value="New Contact Form Message From Siberian Pure!">
+
+        <!-- Redirect Page after submit -->
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <!-- New Phone field -->
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <!-- New Country field -->
+        <select name="country" required>
+          <option value="" disabled selected>Select Country</option>
+          <option value="Russia">Russia</option>
+          <option value="India">India</option>
+          <option value="Europe">Europe</option>
+          <option value="Middle East">Middle East</option>
+          <option value="Asia-Pacific">Asia-Pacific</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Africa">Africa</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
@@ -204,7 +237,7 @@
             <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 50px;">
           </div>
           <p>Bringing the purest taste of Siberian nature to your table since 1975.</p>
-         <div class="social-links">
+          <div class="social-links">
             <a href="#" class="social-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -224,6 +257,7 @@
             </a>
           </div>
         </div>
+
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>

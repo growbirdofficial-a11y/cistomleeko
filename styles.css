@@ -121,7 +121,7 @@ body {
     align-items: center;
     justify-content: space-between;
     max-width: 1280px;
-    margin: -100px auto;
+    margin: 0px auto;
 }
 
 .logo {
@@ -1137,4 +1137,29 @@ section {
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Floating Language Buttons */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  gap: 8px;
+}
+
+.language-btn {
+  padding: 8px 14px;
+  background: #0088cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.language-btn:hover {
+  background: #006fa5;
 }
