@@ -29,7 +29,7 @@ body {
     position: absolute;
     inset: 0;
     opacity: 0.1;
-} */
+} */ 
 
 .hero-bg-animation {
   position: absolute;
@@ -53,7 +53,9 @@ body {
 .hero {
   position: relative;
   z-index: 1;
-  background: linear-gradient(to bottom, #aadef8, #0e3d4f);
+  background: linear-gradient(135deg, #437c8f 0%, #69b7e4 50%, #226fa8 100%);
+
+  /* background: linear-gradient(to bottom, #aadef8, #0e3d4f); */
 }
 
 
@@ -97,11 +99,21 @@ body {
     padding: 24px 48px;
 }
 
+/* .logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+} */
+
 .logo img {
   height: 60px;
   width: auto;
   object-fit: contain;
+
+  /* shadow */
+  filter: drop-shadow(0 4px 8px rgba(139, 234, 253, 0.25));
 }
+
 
 
 .nav {
@@ -109,7 +121,7 @@ body {
     align-items: center;
     justify-content: space-between;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: -100px auto;
 }
 
 .logo {
@@ -130,21 +142,57 @@ body {
     font-weight: 600;
 }
 
-.nav-links {
+
+
+/* .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 32px;
+    background: #f1f1f3;
+    padding: 10px 30px;
+    border-radius: 10px;
 }
 
 .nav-links a {
-    color: rgba(248, 248, 248, 0.9);
+    color: #321477;
+    font-weight: 650;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s ease;
+    font-size: 22px;
 }
 
 .nav-links a:hover {
-    color: white;
+    color: #fff5c7;
+    transform: translateY(-1px);
+} */
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* space between boxes */
 }
+
+.nav-links a {
+    background: white;
+    padding: 8px 16px;
+    border-color: #05152c;
+    border-width: 40px;
+    border-radius: 8px; /* box rounded */
+    text-decoration: none;
+    color: rgb(56, 23, 123);
+    font-weight: 650;
+    font-size: 20px;
+    transition: 0.3s ease;
+    box-shadow: #05152c;
+    border: 1px solid #ddd; /* light border */
+}
+
+/* hover effect (optional but looks clean) */
+.nav-links a:hover {
+   
+    transform: translateY(-1px);
+}
+
 
 /* Buttons */
 .btn {
@@ -192,7 +240,7 @@ body {
     z-index: 10;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 80px 48px 128px;
+    padding: 20px 48px 128px;
 }
 
 .hero-grid {
