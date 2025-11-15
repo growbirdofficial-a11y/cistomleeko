@@ -44,6 +44,25 @@
           <button class="language-toggle" id="lang-toggle" type="button">РУ</button>
         </div>
       </nav>
+      <!-- INSERT HERE -->
+    <!-- Mobile menu button (visible only on small screens) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      ☰ Menu
+    </button>
+
+    <!-- Mobile menu panel -->
+    <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+      <button id="mobileMenuClose" aria-label="Close menu" style="align-self:flex-end;padding:6px 8px;">✕</button>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="contactus.html">Contact</a>
+
+      <div style="margin-top:12px;">
+        <button class="lang-btn">EN</button>
+        <button class="lang-btn">RU</button>
+      </div>
+    </nav>
 
       <p class="tagline" data-en="Pure Goodness. Every Drop." data-ru="Чистота и свежесть в каждой капле.">
         Pure Goodness. Every Drop.
@@ -86,6 +105,8 @@
           Discover our range...
         </p>
       </div>
+
+
 
       <div class="carousel-wrapper">
         <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
@@ -434,6 +455,63 @@
       applyLanguage();
     });
   </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.getElementById("mobileMenuBtn");
+    const panel = document.getElementById("mobileMenuPanel");
+    const closeBtn = document.getElementById("mobileMenuClose");
+
+    if (!openBtn || !panel || !closeBtn) {
+        console.error("Mobile menu elements missing.");
+        return;
+    }
+
+    openBtn.addEventListener("click", function () {
+        panel.classList.add("open");
+        document.body.style.overflow = "hidden"; // disable background scrolling
+    });
+
+    closeBtn.addEventListener("click", function () {
+        panel.classList.remove("open");
+        document.body.style.overflow = ""; // re-enable scroll
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector(".carousel-track");
+  const nextBtn = document.querySelector(".carousel-next");
+  const prevBtn = document.querySelector(".carousel-prev");
+
+  let index = 0;
+
+  function updateCarousel() {
+    const cardWidth = track.children[0].clientWidth + 16; // card + gap
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (index < track.children.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener("resize", updateCarousel);
+
+});
+</script>
+
+
 </body>
 </html>
 

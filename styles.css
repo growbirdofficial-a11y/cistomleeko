@@ -74,6 +74,7 @@ body {
 
 /* Header */
 .header {
+    
     position: relative;
     z-index: 10;
     padding: 24px 48px;
@@ -379,6 +380,8 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
+     min-width: 250px;
+  max-width: 250px; /* ADD THIS */
 }
 
 .product-card:hover {
@@ -1230,4 +1233,360 @@ section {
         width: 80%;
         margin: 0 auto;
     }
+}
+
+
+
+
+/* ---------- Make hero image fluid (remove fixed height) ---------- */
+.hero-image img {
+  width: 100%;
+  height: auto;        /* was fixed to 500px — now fluid */
+  max-height: 90vh;    /* optional: prevents extremely tall images */
+}
+
+/* ---------- Make .hero-grid collapse into single column early ---------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr; /* stack hero text + image */
+    gap: 24px;
+  }
+
+  .hero-text, .hero-image-wrapper {
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 24px;
+  }
+}
+
+/* ---------- Prevent fixed-width container from squeezing content ---------- */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------- Nav: convert right-side links into mobile hamburger ---------- */
+/* Hide large nav-links on small screens (you already hide .nav-links at 768, but ensure) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  /* show mobile menu button */
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: white;
+    cursor: pointer;
+  }
+
+  /* language switcher move so it doesn't overlap hero */
+  .language-switcher {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+}
+
+/* ---------- Mobile menu panel (hidden by default) ---------- */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  max-width: 80%;
+  height: 100vh;
+  background: white;
+  z-index: 99999;
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  box-shadow: -10px 0 30px rgba(10,29,55,0.12);
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+/* when open */
+.mobile-menu-panel.open {
+  transform: translateX(0);
+}
+
+/* mobile links inside panel */
+.mobile-menu-panel a {
+  display: block;
+  padding: 12px 14px;
+  color: #0a1d37;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #f7f8fa;
+  margin-bottom: 6px;
+}
+
+/* Mobile: move floating language buttons so they don't cover content */
+@media (max-width: 480px) {
+  .language-switcher {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    flex-direction: row;
+  }
+
+  /* reduce hero heading size for narrow devices */
+  .hero-text h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  /* ensure hero buttons wrap */
+  .hero-buttons {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  /* Avoid very large left padding on tagline or other elements */
+  .tagline { margin-left: 12px; }
+}
+
+/* ---------- Fix layout of right-floating tiny menu seen in screenshot ---------- */
+/* If you have an element that is vertically stacked (right side), give it a responsive fallback */
+.right-floating {
+  position: static; /* fallback so it flows naturally on small screens */
+}
+
+/* if you actually used position: fixed; for right column, change only below 1024 */
+@media (max-width: 1024px) {
+  .right-floating, .sidebar, .vertical-nav {
+    position: relative !important;
+    width: 100% !important;
+    display: block;
+    margin: 8px 0;
+    transform: none !important;
+    box-shadow: none;
+  }
+}
+
+/* ---------- Tidy up long texts and images in About/CEO sections ---------- */
+.about-image, .about-image img, .about-image-wrapper, .about-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Accessibility / touch improvements ---------- */
+.mobile-menu-btn, .language-btn, .lang-btn {
+  -webkit-tap-highlight-color: rgba(0,0,0,0.05);
+  touch-action: manipulation;
+}
+
+@media (max-width: 480px) {
+  .product-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product-card {
+    min-width: 80%;
+    max-width: 80%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .product-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    top: unset;
+    bottom: -12px; /* move arrows below cards */
+  }
+
+  .slider-btn.prev {
+    left: 35%;
+  }
+
+  .slider-btn.next {
+    right: 35%;
+  }
+}
+
+/* ____________________________
+   MOBILE MENU FIXES
+______________________________ */
+
+/* Dark overlay behind menu */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  z-index: 9998;
+}
+
+/* Show overlay */
+.menu-overlay.active {
+  display: block;
+}
+
+/* Mobile panel width fix */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;              /* FIX: narrower */
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99999;
+  padding: 24px 18px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;          /* FIX: scrolling */
+}
+
+/* Slide in */
+.mobile-menu-panel.open {
+  transform: translateX(0);
+}
+
+/* Fix menu links */
+.mobile-menu-panel a {
+  display: block;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #f5f7fa;
+  border-radius: 10px;
+  color: #0a1d37;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Close button fix */
+#mobileMenuClose {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+/* Hide unwanted images inside panel */
+.mobile-menu-panel img {
+  display: none !important;
+}
+
+
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.product-card {
+  min-width: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd35a;
+  border-radius: 50%;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    min-width: 200px;
+  }
+}
+
+/* Hide mobile menu button on desktop */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Show button only on screens below 768px */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+.product-slider {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-slide {
+  min-width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Important */
+  border-radius: 12px;
 }
