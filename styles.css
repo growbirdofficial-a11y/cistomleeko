@@ -17,19 +17,6 @@ body {
     padding: 0 48px;
 }
 
-/* Hero Section */
-/* .hero {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #0A1D37, #5BC0EB);
-    overflow: hidden;
-} */
-
-/* .hero-bg-animation {
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
-} */ 
 
 .hero-bg-animation {
   position: absolute;
@@ -58,13 +45,6 @@ body {
   /* background: linear-gradient(to bottom, #aadef8, #0e3d4f); */
 }
 
-
-/* .blob {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    filter: blur(80px);
-} */
 
 .blob-1 {
     top: 80px;
@@ -99,16 +79,11 @@ body {
     padding: 24px 48px;
 }
 
-/* .logo img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-} */
-
 .logo img {
-  height: 60px;
+  height: 40px;
   width: auto;
   object-fit: contain;
+  align-items: center;
 
   /* shadow */
   filter: drop-shadow(0 4px 8px rgba(139, 234, 253, 0.25));
@@ -144,32 +119,10 @@ body {
 
 
 
-/* .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    background: #f1f1f3;
-    padding: 10px 30px;
-    border-radius: 10px;
-}
-
-.nav-links a {
-    color: #321477;
-    font-weight: 650;
-    text-decoration: none;
-    transition: 0.3s ease;
-    font-size: 22px;
-}
-
-.nav-links a:hover {
-    color: #fff5c7;
-    transform: translateY(-1px);
-} */
-
 .nav-links {
     display: flex;
     gap: 15px; /* space between boxes */
+      align-items: center;
 }
 
 .nav-links a {
@@ -203,6 +156,16 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     font-weight: 500;
+    margin-left: 10px;
+}
+.tagline {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-left: 160px;
+    color: #f6f6f8; /* change if background is light */
+    text-align:left;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
@@ -247,21 +210,47 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .hero-text h1 {
     color: white;
+    right: 200px;
     font-size: 56px;
     line-height: 1.1;
     margin-bottom: 24px;
+     margin-left: 10px;
 }
+
+.language-toggle {
+      padding: 10px 15px; /* Adjust padding for better look */
+      background: none; /* Remove background */
+      color: #0A1D37; /* Dark text color */
+      border: 2px solid #0A1D37; /* Add border for definition */
+      border-radius: 5px; 
+      cursor: pointer;
+      font-weight: bold;
+      font-family: inherit;
+      font-size: 16px; 
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      margin-left: 20px; /* Space it out from other links */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Hover effect to make it interactive */
+    .language-toggle:hover {
+      background-color: #5BC0EB; /* Light blue background on hover */
+      color: white; /* White text on hover */
+      border-color: #5BC0EB; /* Match border to background */
+    }
 
 .hero-text p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 32px;
+    margin-left: 10px;
 }
 
 .hero-buttons {
@@ -533,8 +522,8 @@ section {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    gap: 30px;
+    align-items:center;
 }
 
 .about-label {
@@ -599,6 +588,7 @@ section {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    width: 700px;
 }
 
 .about-image img {
@@ -1162,4 +1152,27 @@ section {
 
 .language-btn:hover {
   background: #006fa5;
+}
+
+.language-switch {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 8px 14px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    background: white;
+    color: #0a1d37;
 }
