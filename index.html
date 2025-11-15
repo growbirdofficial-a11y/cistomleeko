@@ -5,278 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siberian Pure - Premium Dairy Products</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+    /* small helper so toggle looks similar to products.html */
+    .nav-links { display:flex; align-items:center; gap:1rem; }
+    .language-toggle {
+      background: transparent;
+      border: 1px solid rgba(10,29,55,0.08);
+      padding: 0.4rem 0.7rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight:600;
+    }
+    @media (max-width:880px){ .nav-links{flex-wrap:wrap} }
+  </style>
 </head>
 <body>
  
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-bg-animation">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-        </div>
-
-        <!-- Header -->
-        <header class="header">
-            <nav class="nav">
-                <div class="logo">
-                    <a href="index.html" class="logo">
-                        <img src="images/logo1.png" alt="Siberian Pure Logo" style="height: 250px;"> 
-                    </a>
-                </div>
-
-                <div class="nav-links">
-                    <a data-key="nav_products" href="products.html">Products</a>
-                    <a data-key="nav_story" href="ourstory.html">Our Story</a>
-                    <a data-key="nav_contact" href="contactus.html">Contact</a>
-                </div>
-            </nav>
-            <p class="tagline">Чистая доброта. Каждая капля.</p>
-        </header>
-
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1 data-key="hero_title">PURE FRESHNESS FROM SIBERIA</h1>
-                    <p data-key="hero_desc">
-                        Experience the pristine taste of milk sourced from the untouched landscapes of Siberia. 
-                        Nature's purest gift, delivered to your table.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary">
-                            <a data-key="btn_explore" href="products.html">Explore Products</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="hero-image-wrapper">
-                    <div class="hero-image">
-                        <img src="https://i.ibb.co/2YKgkGv7/ahmadreza-rezaie-e-U2s-fon-Jkg-unsplash.jpg" alt="Fresh Siberian Milk">
-                        <div class="image-overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <svg width="32" height="32" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </div>
+    <!-- HERO / NAV -->
+  <div class="hero">
+    <div class="hero-bg-animation">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
     </div>
 
-    <!-- REST OF YOUR CODE BELOW (UNCHANGED) -->
-
-
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>OUR PREMIUM PRODUCTS</h2>
-                <p>Discover our range of pure, fresh dairy products crafted with care from Siberian farms</p>
-            </div>
-
-            <div class="carousel-wrapper">
-                <button class="carousel-btn carousel-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <div class="carousel">
-                    <div class="carousel-track">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1649036035763-30cbd98c91f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMG1pbGslMjBnbGFzc3xlbnwxfHx8fDE3NjI4MzA3Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Premium Fresh Milk">
-                            </div>
-                            <div class="product-content">
-                                <h3>Premium Fresh Milk</h3>
-                                <p>100% pure Siberian milk, delivered fresh daily</p>
-                                <button class="btn btn-yellow">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1635714293982-65445548ac42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYWlyeSUyMHByb2R1Y3RzJTIwY2hlZXNlfGVufDF8fHx8MTc2Mjg1OTYxM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Artisan Cheese">
-                            </div>
-                            <div class="product-content">
-                                <h3>Artisan Cheese Selection</h3>
-                                <p>Handcrafted cheeses with traditional recipes</p>
-                                <button class="btn btn-yellow">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1644778723705-59d3b3fce3b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2d1cnQlMjBmcmVzaHxlbnwxfHx8fDE3NjI4NTk2MTN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Creamy Yogurt">
-                            </div>
-                            <div class="product-content">
-                                <h3>Creamy Yogurt</h3>
-                                <p>Rich, probiotic yogurt for health and taste</p>
-                                <button class="btn btn-yellow">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1660798670183-333ac43c3c4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXR0ZXIlMjBkYWlyeXxlbnwxfHx8fDE3NjI4MzA3Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Organic Butter">
-                            </div>
-                            <div class="product-content">
-                                <h3>Organic Butter</h3>
-                                <p>Golden butter from grass-fed cows</p>
-                                <button class="btn btn-yellow">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-next">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
+    <header class="header">
+      <nav class="nav container" style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo1.png" alt="Siberian Pure Logo" style="height:80px;"></a>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>WHY CHOOSE SIBERIAN PURE?</h2>
-                <p>Experience the difference that pure Siberian nature makes</p>
-            </div>
+        <div class="nav-links">
+          <a href="index.html" data-en="Home" data-ru="Главная">Home</a>
+          <a href="products.html" data-en="Products" data-ru="Продукты">Products</a>
+          <a href="ourstory.html" data-en="Our Story" data-ru="Наша История">Our Story</a>
+          <a href="contactus.html" data-en="Contact" data-ru="Контакт">Contact</a>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon" style="background-color: rgba(91, 192, 235, 0.1);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
-                            <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path>
-                            <line x1="8" y1="16" x2="8.01" y2="16"></line>
-                            <line x1="8" y1="8" x2="8.01" y2="8"></line>
-                            <line x1="12" y1="12" x2="12.01" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            <line x1="16" y1="16" x2="16.01" y2="16"></line>
-                        </svg>
-                    </div>
-                    <h3>Siberian Purity</h3>
-                    <p>Sourced from pristine Siberian landscapes where nature remains untouched</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" style="background-color: rgba(255, 209, 102, 0.1);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD166" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                    <h3>100% Natural</h3>
-                    <p>No additives, no preservatives - just pure, wholesome dairy goodness</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" style="background-color: rgba(91, 192, 235, 0.1);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
-                            <path d="M17 8c0-1.5-2-4-5-4S7 6.5 7 8"></path>
-                            <path d="M12 8v13"></path>
-                            <path d="M7 8c0 4.5 1 7 5 7s5-2.5 5-7"></path>
-                        </svg>
-                    </div>
-                    <h3>Sustainable Farming</h3>
-                    <p>Our cows graze on organic pastures, living happy and healthy lives</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" style="background-color: rgba(255, 209, 102, 0.1);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD166" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Premium Quality</h3>
-                    <p>Award-winning products that meet the highest international standards</p>
-                </div>
-            </div>
-
-            <div class="cow-decoration">
-                <svg class="cow-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="28" cy="22" r="1.5" fill="#0A1D37"/>
-                    <circle cx="36" cy="22" r="1.5" fill="#0A1D37"/>
-                </svg>
-                <svg class="cow-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="28" cy="22" r="1.5" fill="#0A1D37"/>
-                    <circle cx="36" cy="22" r="1.5" fill="#0A1D37"/>
-                </svg>
-                <svg class="cow-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95"/>
-                    <circle cx="28" cy="22" r="1.5" fill="#0A1D37"/>
-                    <circle cx="36" cy="22" r="1.5" fill="#0A1D37"/>
-                </svg>
-            </div>
+          <!-- SINGLE TOGGLE: same as products.html -->
+          <button class="language-toggle" id="lang-toggle" type="button">РУ</button>
         </div>
-    </section>
+      </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <div class="about-label">
-                        <svg class="cow-icon-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95"/>
-                            <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95"/>
-                        </svg>
-                        <span>OUR STORY</span>
-                    </div>
-                    <h2>FROM SIBERIAN PASTURES TO YOUR TABLE</h2>
-                    <div class="about-content">
-                        <p>In the heart of Siberia, where pristine snow-capped mountains meet endless pastures, our story begins. For generations, our family has been committed to producing the finest dairy products nature has to offer.</p>
-                        <p>Our cows graze freely on organic meadows, breathing the crisp Siberian air and drinking from crystal-clear mountain streams. This natural environment, combined with our traditional farming methods, creates milk of unparalleled purity and taste.</p>
-                        <p>Every product we create is a testament to our dedication to quality, sustainability, and the timeless bond between nature and nourishment.</p>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Years Legacy</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Organic</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Happy Cows</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image-wrapper">
-                    <div class="about-image">
-                   <img src="https://i.ibb.co/hJzRG1Y0/image3-Picsart-Ai-Image-Enhancer.jpg" alt="Siberian dairy farm">
-                    </div>
-                    <div class="about-decoration decoration-1">
-                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="32" cy="35" rx="18" ry="14" fill="white" opacity="0.95"/>
-                            <circle cx="32" cy="22" r="9" fill="white" opacity="0.95"/>
-                            <circle cx="28" cy="22" r="1.5" fill="#FFD166"/>
-                            <circle cx="36" cy="22" r="1.5" fill="#FFD166"/>
-                        </svg>
-                    </div>
-                    <div class="about-decoration decoration-2">
-                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="32" cy="35" rx="18" ry="14" fill="white" opacity="0.95"/>
-                            <circle cx="32" cy="22" r="9" fill="white" opacity="0.95"/>
-                            <circle cx="28" cy="22" r="1.5" fill="#5BC0EB"/>
-                            <circle cx="36" cy="22" r="1.5" fill="#5BC0EB"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+      <p class="tagline" data-en="Pure Goodness. Every Drop." data-ru="Чистота и свежесть в каждой капле.">
+        Pure Goodness. Every Drop.
+      </p>
+    </header>
+
+    <!-- Hero Content -->
+    <div class="hero-content container">
+      <div class="hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;">
+        <div class="hero-text">
+          <h1 data-en="PURE FRESHNESS FROM SIBERIA" data-ru="ЧИСТАЯ СВЕЖЕСТЬ ИЗ СИБИРИ">PURE FRESHNESS FROM SIBERIA</h1>
+
+          <p data-en="Experience the pristine taste of milk sourced from the untouched landscapes of Siberia. Nature's purest gift, delivered to your table."
+             data-ru="Откройте вкус настоящего сибирского молока, созданного природой. Самый чистый дар — на ваш стол.">
+            Experience the pristine taste...
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="products.html" data-en="Explore Products" data-ru="Посмотреть продукты">Explore Products</a>
+          </div>
         </div>
-    </section>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-image">
+            <img src="https://i.ibb.co/2YKgkGv7/ahmadreza-rezaie-e-U2s-fon-Jkg-unsplash.jpg" alt="Fresh Siberian Milk" style="width:100%;border-radius:12px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-en="OUR PREMIUM PRODUCTS" data-ru="НАШИ ПРЕМИАЛЬНЫЕ ПРОДУКТЫ">OUR PREMIUM PRODUCTS</h2>
+        <p data-en="Discover our range of pure, fresh dairy products crafted with care from Siberian farms"
+           data-ru="Откройте ассортимент свежей молочной продукции, созданной с заботой сибирских ферм.">
+          Discover our range...
+        </p>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+        <div class="carousel">
+          <div class="carousel-track" style="display:flex;gap:1rem;overflow:hidden;">
+            <div class="product-card">
+              <div class="product-image"><img src="https://images.unsplash.com/photo-1649036035763-30cbd98c91f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMG1pbGslMjBnbGFzc3xlbnwxfHx8fDE3NjI4MzA3Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt=""></div>
+              <div class="product-content">
+                <h3 data-en="Premium Fresh Milk" data-ru="Премиальное свежее молоко">Premium Fresh Milk</h3>
+                <p data-en="100% pure Siberian milk, delivered fresh daily" data-ru="100% чистое сибирское молоко, доставляемое ежедневно">100% pure...</p>
+                
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image"><img src="https://images.unsplash.com/photo-1635714293982-65445548ac42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYWlyeSUyMHByb2R1Y3RzJTIwY2hlZXNlfGVufDF8fHx8MTc2Mjg1OTYxM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt=""></div>
+              <div class="product-content">
+                <h3 data-en="Artisan Cheese Selection" data-ru="Ассортимент ремесленных сыров">Artisan Cheese</h3>
+                <p data-en="Handcrafted cheeses with traditional recipes" data-ru="Традиционные рецепты, приготовленные вручную">Handcrafted cheeses...</p>
+                
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image"><img src="https://images.unsplash.com/photo-1644778723705-59d3b3fce3b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2d1cnQlMjBmcmVzaHxlbnwxfHx8fDE3NjI4NTk2MTN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Creamy Yogurt" alt=""></div>
+              <div class="product-content">
+                <h3 data-en="Creamy Yogurt" data-ru="Кремовый йогурт">Creamy Yogurt</h3>
+                <p data-en="Rich, probiotic yogurt for health and taste" data-ru="Полезный, насыщенный пробиотиками йогурт">Rich, probiotic yogurt...</p>
+                
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image"><img src="https://images.unsplash.com/photo-1660798670183-333ac43c3c4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXR0ZXIlMjBkYWlyeXxlbnwxfHx8fDE3NjI4MzA3Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt=""></div>
+              <div class="product-content">
+                <h3 data-en="Organic Butter" data-ru="Органическое масло">Organic Butter</h3>
+                <p data-en="Golden butter from grass-fed cows" data-ru="Золотистое масло от коров на свободном выпасе">Golden butter...</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;">
+        <div class="about-text">
+          <div class="about-label" data-en="OUR STORY" data-ru="НАША ИСТОРИЯ">OUR STORY</div>
+          <h2 data-en="FROM SIBERIAN PASTURES TO YOUR TABLE" data-ru="ОТ СИБИРСКИХ ПАСТБИЩ ДО ВАШЕГО СТОЛА">FROM SIBERIAN PASTURES TO YOUR TABLE</h2>
+
+          <p data-en="In the heart of Siberia, where pristine snow-capped mountains meet endless pastures, our story begins. For generations, our family has been committed to producing the finest dairy products nature has to offer."
+             data-ru="В сердце Сибири, где нетронутые горы встречаются с бесконечными пастбищами, начинается наша история. Поколениями наша семья стремится производить лучшую молочную продукцию.">
+            In the heart of Siberia...
+          </p>
+
+          <p data-en="Our cows graze freely on organic meadows, breathing the crisp Siberian air and drinking from crystal-clear mountain streams."
+             data-ru="Наши коровы пасутся на органических лугах, дышат свежим сибирским воздухом и пьют чистую горную воду.">
+            Our cows graze freely...
+          </p>
+
+          <p data-en="Every product we create is a testament to our dedication to quality, sustainability, and the timeless bond between nature and nourishment."
+             data-ru="Каждый наш продукт — свидетельство приверженности качеству, устойчивости и связи природы и питания.">
+            Every product we create...
+          </p>
+
+          <div class="stats-grid" style="display:flex;gap:1rem;margin-top:1rem;">
+            <div class="stat"><div class="stat-number">50+</div><div class="stat-label" data-en="Years Legacy" data-ru="Лет">Years Legacy</div></div>
+            <div class="stat"><div class="stat-number">100%</div><div class="stat-label" data-en="Organic" data-ru="Органическое">Organic</div></div>
+            <div class="stat"><div class="stat-number">500+</div><div class="stat-label" data-en="Happy Cows" data-ru="Счастливых Коров">Happy Cows</div></div>
+          </div>
+        </div>
+
+        <div class="about-image-wrapper"><img src="https://i.ibb.co/hJzRG1Y0/image3-Picsart-Ai-Image-Enhancer.jpg" alt="Siberian dairy farm" style="width:100%;border-radius:12px;"></div>
+      </div>
+    </div>
+  </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
-                <h2>WHAT OUR CUSTOMERS SAY:</h2>
-                <p>Join thousands of happy customers who trust Siberian Pure</p>
+                <h2 data-en="WHAT OUR CUSTOMERS SAY:" 
+                data-ru="ЧТО ГОВОРЯТ НАШИ КЛИЕНТЫ:">WHAT OUR CUSTOMERS SAY:</h2>
+                <p   data-en="Join thousands of happy customers who trust Siberian Pure"
+                data-ru="Присоединяйтесь к тысячам довольных клиентов, которые доверяют Siberian Pure">Join thousands of happy customers who trust Siberian Pure</p>
             </div>
 
             <div class="testimonials-carousel">
@@ -292,7 +191,8 @@
                                 <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                                 <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p class="testimonial-text">"The taste is incomparable! You can truly taste the difference that pure, natural milk makes. My family won't drink anything else now."</p>
+                            <p class="testimonial-text" data-en="The taste is incomparable! You can truly taste the difference that pure, natural milk makes. My family won't drink anything else now."
+   data-ru="Вкус несравним! Вы действительно чувствуете разницу натурального и чистого молока. Моя семья теперь не пьёт ничего другого.">"The taste is incomparable! You can truly taste the difference that pure, natural milk makes. My family won't drink anything else now."</p>
                             <div class="stars">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD166" stroke="#FFD166" stroke-width="2">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -310,15 +210,18 @@
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                                 </svg>
                             </div>
-                            <div class="testimonial-author">Elena Petrova</div>
-                            <div class="testimonial-role">Health Enthusiast</div>
+                            <div class="testimonial-author"  data-en="Elena Petrova"
+     data-ru="Елена Петрова">Elena Petrova</div>
+                            <div class="testimonial-role"   data-en="Health Enthusiast"
+     data-ru="Сторонница здорового питания">Health Enthusiast</div>
                         </div>
                         <div class="testimonial-card">
                             <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
                                 <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                                 <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p class="testimonial-text">"As a chef, I'm extremely particular about ingredients. Siberian Pure's dairy products are exceptional - they elevate every dish I create."</p>
+                            <p class="testimonial-text" data-en="As a chef, I'm extremely particular about ingredients. Siberian Pure's dairy products are exceptional - they elevate every dish I create."
+   data-ru="Как шеф-повар, я очень требователен к ингредиентам. Молочные продукты Siberian Pure — исключительные, они улучшают каждое блюдо, которое я создаю.">"As a chef, I'm extremely particular about ingredients. Siberian Pure's dairy products are exceptional - they elevate every dish I create."</p>
                             <div class="stars">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD166" stroke="#FFD166" stroke-width="2">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -336,15 +239,18 @@
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                                 </svg>
                             </div>
-                            <div class="testimonial-author">Marcus Chen</div>
-                            <div class="testimonial-role">Professional Chef</div>
+                            <div class="testimonial-author" data-en="Marcus Chen"
+     data-ru="Маркус Чен">Marcus Chen</div>
+                            <div class="testimonial-role"  data-en="Professional Chef"
+     data-ru="Профессиональный шеф-повар">Professional Chef</div>
                         </div>
                         <div class="testimonial-card">
                             <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
                                 <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                                 <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p class="testimonial-text">"Knowing my children are drinking pure, organic milk gives me peace of mind. The quality and freshness are outstanding!"</p>
+                            <p class="testimonial-text"  data-en="Knowing my children are drinking pure, organic milk gives me peace of mind. The quality and freshness are outstanding!"
+   data-ru="Зная, что мои дети пьют чистое, органическое молоко, я чувствую спокойствие. Качество и свежесть просто превосходные!">"Knowing my children are drinking pure, organic milk gives me peace of mind. The quality and freshness are outstanding!"</p>
                             <div class="stars">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD166" stroke="#FFD166" stroke-width="2">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -362,15 +268,18 @@
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                                 </svg>
                             </div>
-                            <div class="testimonial-author">Sofia Anderson</div>
-                            <div class="testimonial-role">Mother of Three</div>
+                            <div class="testimonial-author  data-en="Sofia Anderson"
+     data-ru="София Андерсон" >Sofia Anderson</div>
+                            <div class="testimonial-role"  data-en="Mother of Three"
+     data-ru="Мама троих детей">Mother of Three</div>
                         </div>
                         <div class="testimonial-card">
                             <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
                                 <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                                 <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                             </svg>
-                            <p class="testimonial-text">"The protein-rich yogurt is perfect for my post-workout routine. Natural, delicious, and incredibly nutritious."</p>
+                            <p class="testimonial-text"  data-en="The protein-rich yogurt is perfect for my post-workout routine. Natural, delicious, and incredibly nutritious."
+   data-ru="Йогурт, богатый белком, идеально подходит для моего восстановления после тренировки. Натуральный, вкусный и очень полезный.">"The protein-rich yogurt is perfect for my post-workout routine. Natural, delicious, and incredibly nutritious."</p>
                             <div class="stars">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD166" stroke="#FFD166" stroke-width="2">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -388,8 +297,10 @@
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                                 </svg>
                             </div>
-                            <div class="testimonial-author">Ivan Volkov</div>
-                            <div class="testimonial-role">Fitness Trainer</div>
+                            <div class="testimonial-author"  data-en="Ivan Volkov"
+     data-ru="Иван Волков">Ivan Volkov</div>
+                            <div class="testimonial-role"  data-en="Fitness Trainer"
+     data-ru="Фитнес-тренер">Fitness Trainer</div>
                         </div>
                     </div>
                 </div>
@@ -416,7 +327,8 @@
                         </svg>
                         <span class="logo-text">Siberian Pure</span>
                     </div>
-                    <p>Bringing the purest taste of Siberian nature to your table since 1975.</p>
+                    <p data-en="Bringing the purest taste of Siberian nature to your table since 1975."
+   data-ru="Мы приносим на ваш стол самый чистый вкус сибирской природы с 1975 года.">Bringing the purest taste of Siberian nature to your table since 1975.</p>
                     <div class="social-links">
                         <a href="#" class="social-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -438,31 +350,32 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-en="Quick Links" data-ru="Быстрые ссылки">Quick Links</h4>
                     <ul>
-                             <li><a href="products.html">Products</a></li>
-            <li><a href="ourstory.html">About Us</a></li>
-            <li><a href="ourstory.html">Our Story</a></li>
+                             <li><a href="products.html" data-en="Products" data-ru="Продукция">Products</a></li>
+            <li><a href="ourstory.html" data-en="About Us" data-ru="О нас">About Us</a></li>
+            <li><a href="ourstory.html" data-en="Our Story" data-ru="Наша история">Our Story</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="#">Fresh Milk</a></li>
-                        <li><a href="#">Cheese</a></li>
-                        <li><a href="#">Yogurt</a></li>
-                        <li><a href="#">Butter</a></li>
+                        <li><a href="#" data-en="Fresh Milk" data-ru="Свежее молоко">Fresh Milk</a></li>
+                        <li><a href="#"  data-en="Cheese" data-ru="Сыр">Cheese</a></li>
+                        <li><a href="#" data-en="Yogurt" data-ru="Йогурт">Yogurt</a></li>
+                        <li><a href="#" data-en="Butter" data-ru="Масло">Butter</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Us</h4>
+                    <h4 data-en="Contact Us" data-ru="Свяжитесь с нами">Contact Us</h4>
                     <ul>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            <span>Siberian Valley, Altai Region, Russia</span>
+                            <span data-en="Siberian Valley, Altai Region, Russia"
+   data-ru="Сибирская долина, Алтайский край, Россия">Siberian Valley, Altai Region, Russia</span>
                         </li>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
@@ -475,7 +388,7 @@
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            <span>hello@siberianpure.com</span>
+                            <span>offerindiabusiness@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -485,8 +398,42 @@
             </div>
         </div>
     </footer>
+
+     <!-- TRANSLATION SCRIPT: same approach as products.html -->
+  <script>
+    let currentLang = "en";
+
+    function applyLanguage() {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        const val = el.getAttribute("data-" + currentLang);
+        if (val === null) return;
+        // preserve HTML if attribute contains tags
+        if (val.includes('<')) el.innerHTML = val;
+        else el.textContent = val;
+      });
+
+      // update html lang
+      document.documentElement.lang = currentLang;
+
+      // update toggle label: when current is 'en' show RU (so user can switch to RU), and vice versa
+      const btn = document.getElementById("lang-toggle");
+      if (btn) btn.textContent = currentLang === "en" ? "РУ" : "EN";
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "ru" : "en";
+      applyLanguage();
+    }
+
+    // wire button
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("lang-toggle");
+      if (btn) btn.addEventListener("click", toggleLanguage);
+
+      // initialize to English
+      applyLanguage();
+    });
+  </script>
 </body>
 </html>
 
-</body>
-</html>
