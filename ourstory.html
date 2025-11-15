@@ -5,41 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siberian Pure - Our Story</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* -------------------------------------- */
-    /* NEW: Attractive Language Toggle Styles */
-    /* -------------------------------------- */
-    
-    /* Ensure the button is styled like a nav link */
-    
-    /* Adjust nav-links layout to include the button seamlessly */
+  <!-- <style>
+    /* Lightweight language toggle styling so it blends with nav */
     .nav-links {
       display: flex;
-      align-items: center; /* Vertically center items */
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .language-toggle {
+      background: transparent;
+      border: 1px solid rgba(10,29,55,0.08);
+      padding: 0.45rem 0.7rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
     }
 
-    /* Style for the active language content */
-    .russian-text {
-      display: none;
+    /* Keep layout safe if styles.css doesn't include these classes */
+    .hero { position: relative; padding-bottom: 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+    .reverse-grid { grid-template-columns: 1fr 1fr; }
+    .about-image img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
+    .stats-grid, .stats-grid .stat, .about-label { display: flex; gap: 0.5rem; align-items: center; }
+    .stats-grid { margin-top: 1.6rem; gap: 1.2rem; flex-wrap: wrap; display:flex; }
+    .stat { flex: 1 1 150px; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; }
+    .stat-number { font-size: 1.4rem; font-weight: 800; }
+    /* small-screen fallback */
+    @media (max-width: 880px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: .6rem; }
     }
-    .active-lang {
-      display: block !important;
-    }
-    
-    /* Ensure only one of the link text is displayed at a time in the footer links */
-    .footer-links ul li {
-        position: relative;
-    }
-    .footer-links ul li .russian-text,
-    .footer-links ul li .english-text {
-        position: static; /* Reset positioning if any */
-        display: inline !important;
-    }
-    .footer-links ul li a {
-        display: none; /* Hide the hardcoded 'Products' text for better control */
-    }
-    
-  </style>
+  </style> -->
 </head>
 <body>
   <div class="hero">
@@ -49,146 +47,168 @@
     </div>
 
     <header class="header">
-      <nav class="nav">
+      <nav class="nav container">
         <div class="logo">
           <a href="index.html" class="logo">
             <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 60px;">
           </a>
         </div>
-        <div class="nav-links">
+
+        <div class="nav-links" role="navigation" aria-label="Main navigation">
           <a href="index.html" data-en="Home" data-ru="Главная">Home</a>
           <a href="products.html" data-en="Products" data-ru="Продукты">Products</a>
           <a href="ourstory.html" class="active" data-en="Our Story" data-ru="Наша История">Our Story</a>
           <a href="contactus.html" data-en="Contact" data-ru="Контакт">Contact</a>
-          
-          <button class="language-toggle" id="lang-toggle" onclick="toggleLanguage()">РУ / EN</button>
+
+          <button class="language-toggle" id="lang-toggle" aria-pressed="false" onclick="toggleLanguage()">РУ</button>
         </div>
       </nav>
     </header>
-
-<section class="about-section">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <div class="about-label">
-          <svg class="cow-icon-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
-            <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
-          </svg>
-          <span class="english-text active-lang" data-key="our_story_label">OUR STORY</span>
-          <span class="russian-text" data-key="our_story_label">НАША ИСТОРИЯ</span>
-        </div>
-        <h2 class="english-text active-lang" data-key="our_story_heading">FROM SIBERIAN PASTURES TO YOUR TABLE </h2>
-        <h2 class="russian-text" data-key="our_story_heading">С Сибирских Пастбищ К Вашему Столу</h2>
-        <div class="about-content">
-          <p class="english-text active-lang" data-key="our_story_p1">Our journey began in the heart of Siberia — a land of pristine nature, clean air, and boundless meadows.</p>
-          <p class="russian-text" data-key="our_story_p1">Наш путь начался в самом сердце Сибири — крае первозданной природы, чистого воздуха и бескрайних лугов.</p>
-          
-          <p class="english-text active-lang" data-key="our_story_p2">For over five decades, we’ve raised happy, healthy cows in an environment that nourishes them naturally. Their milk forms the heart of our products, bringing pure taste and health to families around the world.</p>
-          <p class="russian-text" data-key="our_story_p2">Более пяти десятилетий мы выращиваем счастливых, здоровых коров в естественной среде. Их молоко лежит в основе наших продуктов, принося чистый вкус и здоровье семьям по всему миру.</p>
-
-          <p class="english-text active-lang" data-key="our_story_p3">We believe that true quality comes from care — care for animals, people, and the planet.</p>
-          <p class="russian-text" data-key="our_story_p3">Мы верим, что истинное качество рождается из заботы — заботы о животных, людях и планете.</p>
-        </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-number">50+</div>
-            <div class="stat-label english-text active-lang" data-key="stat1">Years of Heritage</div>
-            <div class="stat-label russian-text" data-key="stat1">Лет Наследия</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">100%</div>
-            <div class="stat-label english-text active-lang" data-key="stat2">Organic Ingredients</div>
-            <div class="stat-label russian-text" data-key="stat2">Органические Ингредиенты</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">500+</div>
-            <div class="stat-label english-text active-lang" data-key="stat3">Happy Cows</div>
-            <div class="stat-label russian-text" data-key="stat3">Счастливых Коров</div>
-          </div>
-        </div>
-      </div>
-      <div class="about-image-wrapper">
-        <div class="about-image">
-        <img src="https://i.ibb.co/0V6hZ17x/young-woman-standing-with-milk-jug-cowshed.jpg" alt="Siberian Farm" style="width: -200px;" />
-        </div>
-        <div class="about-decoration"></div>
-      </div>
-    </div>
   </div>
-</section>
 
-<section class="legacy-section">
-  <div class="container">
-    <div class="about-grid reverse-grid">
-      <div class="about-image-wrapper" data-animate="fade-right">
-        <div class="about-image">
-       <img src="https://i.ibb.co/5X4h9tcS/pexels-shvetsa-5953772.jpg" alt="Siberian Dairy Farm"  />
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="about-label" style="align-items:center; gap:.6rem;">
+            <svg class="cow-icon-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+              <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
+              <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
+            </svg>
+            <span data-en="OUR STORY" data-ru="НАША ИСТОРИЯ">OUR STORY</span>
+          </div>
+
+          <h2 data-en="FROM SIBERIAN PASTURES TO YOUR TABLE" data-ru="С Сибирских Пастбищ К Вашему Столу">
+            FROM SIBERIAN PASTURES TO YOUR TABLE
+          </h2>
+
+          <div class="about-content">
+            <p data-en="Our journey began in the heart of Siberia — a land of pristine nature, clean air, and boundless meadows."
+               data-ru="Наш путь начался в самом сердце Сибири — крае первозданной природы, чистого воздуха и бескрайних лугов.">
+              Our journey began in the heart of Siberia — a land of pristine nature, clean air, and boundless meadows.
+            </p>
+
+            <p data-en="For over five decades, we’ve raised happy, healthy cows in an environment that nourishes them naturally. Their milk forms the heart of our products, bringing pure taste and health to families around the world."
+               data-ru="Более пяти десятилетий мы выращиваем счастливых, здоровых коров в естественной среде. Их молоко лежит в основе наших продуктов, принося чистый вкус и здоровье семьям по всему миру.">
+              For over five decades, we’ve raised happy, healthy cows in an environment that nourishes them naturally. Their milk forms the heart of our products, bringing pure taste and health to families around the world.
+            </p>
+
+            <p data-en="We believe that true quality comes from care — care for animals, people, and the planet."
+               data-ru="Мы верим, что истинное качество рождается из заботы — заботы о животных, людях и планете.">
+              We believe that true quality comes from care — care for animals, people, and the planet.
+            </p>
+          </div>
+
+          <div class="stats-grid" aria-hidden="false">
+            <div class="stat">
+              <div class="stat-number">50+</div>
+              <div class="stat-label" data-en="Years of Heritage" data-ru="Лет Наследия">Years of Heritage</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-number">100%</div>
+              <div class="stat-label" data-en="Organic Ingredients" data-ru="Органические Ингредиенты">Organic Ingredients</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label" data-en="Happy Cows" data-ru="Счастливых Коров">Happy Cows</div>
+            </div>
+          </div>
         </div>
-        <div class="about-decoration"></div>
-      </div>
 
-      <div class="about-text" data-animate="fade-up">
-        <div class="about-label">
-          <svg class="cow-icon-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
-            <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
-          </svg>
-          <span class="english-text active-lang" data-key="our_legacy_label">OUR LEGACY</span>
-          <span class="russian-text" data-key="our_legacy_label">НАШЕ НАСЛЕДИЕ</span>
-        </div>
-        <h2 class="english-text active-lang" data-key="our_legacy_heading">OUR LEGACY OF EXCELLENCE</h2>
-        <h2 class="russian-text" data-key="our_legacy_heading">Наше Наследие Превосходства</h2>
-        <div class="about-content">
-          <p class="english-text active-lang" data-key="our_legacy_p1">Founded in <strong>1990</strong>, Siberian Pure has grown from a small family-owned dairy farm into one of Siberia’s most trusted milk producers.</p>
-          <p class="russian-text" data-key="our_legacy_p1">Основанная в <strong>1990</strong> году, компания Siberian Pure выросла из небольшой семейной молочной фермы в одного из самых надежных производителей молока в Сибири.</p>
-
-          <p class="english-text active-lang" data-key="our_legacy_p2">Our milk is <strong>100% organic</strong>, produced under the <strong>supervision of experts</strong> who ensure every process — from feeding to packaging — meets the highest quality standards.</p>
-          <p class="russian-text" data-key="our_legacy_p2">Наше молоко является <strong>100% органическим</strong> и производится под <strong>контролем экспертов</strong>, которые гарантируют, что каждый процесс — от кормления до упаковки — соответствует высочайшим стандартам качества.</p>
-
-          <p class="english-text active-lang" data-key="our_legacy_p3">We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk, proudly rated as <strong>Siberia’s No.1</strong>.</p>
-          <p class="russian-text" data-key="our_legacy_p3">Мы глубоко заботимся о наших коровах, проводя <strong>регулярные медицинские осмотры</strong> для поддержания их здоровья. Эта забота отражается во вкусе и чистоте нашего молока, которое с гордостью признано <strong>№1 в Сибири</strong>.</p>
-
-          <p class="english-text active-lang" data-key="our_legacy_p4">With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, Siberian Pure operates major centers across <strong>Russia and Europe</strong>.</p>
-          <p class="russian-text" data-key="our_legacy_p4">Благодаря более чем <strong>2200 квалифицированным работникам</strong> и сотрудничеству с многочисленными агентствами, Siberian Pure управляет крупными центрами по всей <strong>России и Европе</strong>.</p>
-
-          <p class="english-text active-lang" data-key="our_legacy_p5">Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic Siberian taste across the globe.</p>
-          <p class="russian-text" data-key="our_legacy_p5">Сегодня наша приверженность чистоте и совершенству позволила нам достичь более <strong>1 крор+</strong> в международном бизнесе, распространяя подлинный сибирский вкус по всему миру.</p>
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <img src="https://i.ibb.co/0V6hZ17x/young-woman-standing-with-milk-jug-cowshed.jpg" alt="Siberian Farm" />
+          </div>
+          <div class="about-decoration"></div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="stats-grid" data-animate="fade-in"> 
-      <div class="stat"> 
-        <div class="stat-number">1990</div> 
-        <div class="stat-label english-text active-lang" data-key="stat4">Established</div> 
-        <div class="stat-label russian-text" data-key="stat4">Основан</div> 
-      </div> 
-      <div class="stat"> 
-        <div class="stat-number">2200+</div> 
-        <div class="stat-label english-text active-lang" data-key="stat5">Workers</div> 
-        <div class="stat-label russian-text" data-key="stat5">Работники</div> 
-      </div> 
-      <div class="stat"> 
-        <div class="stat-number">1 Cr+</div> 
-        <div class="stat-label english-text active-lang" data-key="stat6">Foreign Business</div> 
-        <div class="stat-label russian-text" data-key="stat6">Зарубежный Бизнес</div> 
-      </div> 
-      <div class="stat"> 
-        <div class="stat-number">No.1</div> 
-        <div class="stat-label english-text active-lang" data-key="stat7">Milk Brand in Siberia</div>
-        <div class="stat-label russian-text" data-key="stat7">Молочный Бренд №1 в Сибири</div>
-      </div> 
-    </div> 
-  </div> 
-</section>
-
-<footer id="contact" class="footer">
+  <!-- LEGACY -->
+  <section class="legacy-section">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <svg class="cow-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="about-grid reverse-grid" style="align-items:center;">
+        <div class="about-image-wrapper" data-animate="fade-right">
+          <div class="about-image">
+            <img src="https://i.ibb.co/5X4h9tcS/pexels-shvetsa-5953772.jpg" alt="Siberian Dairy Farm" />
+          </div>
+        </div>
+
+        <div class="about-text" data-animate="fade-up">
+          <div class="about-label" style="align-items:center; gap:.6rem;">
+            <svg class="cow-icon-small" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+              <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
+              <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
+            </svg>
+            <span data-en="OUR LEGACY" data-ru="НАШЕ НАСЛЕДИЕ">OUR LEGACY</span>
+          </div>
+
+          <h2 data-en="OUR LEGACY OF EXCELLENCE" data-ru="Наше Наследие Превосходства">OUR LEGACY OF EXCELLENCE</h2>
+
+          <div class="about-content">
+            <p data-en="Founded in <strong>1990</strong>, Siberian Pure has grown from a small family-owned dairy farm into one of Siberia’s most trusted milk producers."
+               data-ru="Основанная в <strong>1990</strong> году, компания Siberian Pure выросла из небольшой семейной молочной фермы в одного из самых надежных производителей молока в Сибири.">
+              Founded in <strong>1990</strong>, Siberian Pure has grown from a small family-owned dairy farm into one of Siberia’s most trusted milk producers.
+            </p>
+
+            <p data-en="Our milk is <strong>100% organic</strong>, produced under the <strong>supervision of experts</strong> who ensure every process — from feeding to packaging — meets the highest quality standards."
+               data-ru="Наше молоко является <strong>100% органическим</strong> и производится под <strong>контролем экспертов</strong>, которые гарантируют, что каждый процесс — от кормления до упаковки — соответствует высочайшим стандартам качества.">
+              Our milk is <strong>100% organic</strong>, produced under the <strong>supervision of experts</strong> who ensure every process — from feeding to packaging — meets the highest quality standards.
+            </p>
+
+            <p data-en="We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk, proudly rated as <strong>Siberia’s No.1</strong>."
+               data-ru="Мы глубоко заботимся о наших коровах, проводя <strong>регулярные медицинские осмотры</strong> для поддержания их здоровья. Эта забота отражается во вкусе и чистоте нашего молока, которое с гордостью признано <strong>№1 в Сибири</strong>.">
+              We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk, proudly rated as <strong>Siberia’s No.1</strong>.
+            </p>
+
+            <p data-en="With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, Siberian Pure operates major centers across <strong>Russia and Europe</strong>."
+               data-ru="Благодаря более чем <strong>2200 квалифицированным работникам</strong> и сотрудничеству с многочисленными агентствами, Siberian Pure управляет крупными центрами по всей <strong>России и Европе</strong>.">
+              With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, Siberian Pure operates major centers across <strong>Russia and Europe</strong>.
+            </p>
+
+            <p data-en="Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic Siberian taste across the globe."
+               data-ru="Сегодня наша приверженность чистоте и совершенству позволила нам достичь более <strong>1 крор+</strong> в международном бизнесе, распространяя подлинный сибирский вкус по всему миру.">
+              Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic Siberian taste across the globe.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid" data-animate="fade-in" style="margin-top:1.4rem;">
+        <div class="stat">
+          <div class="stat-number">1990</div>
+          <div class="stat-label" data-en="Established" data-ru="Основан">Established</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">2200+</div>
+          <div class="stat-label" data-en="Workers" data-ru="Работники">Workers</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">1 Cr+</div>
+          <div class="stat-label" data-en="Foreign Business" data-ru="Зарубежный Бизнес">Foreign Business</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">No.1</div>
+          <div class="stat-label" data-en="Milk Brand in Siberia" data-ru="Молочный Бренд №1 в Сибири">Milk Brand in Siberia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer" style="margin-top:2rem; padding:2rem 0;">
+    <div class="container">
+      <div class="footer-grid" style="display:flex; gap:2rem; flex-wrap:wrap;">
+        <div class="footer-brand" style="flex:1 1 260px;">
+          <div class="logo" style="display:flex; align-items:center; gap:.6rem;">
+            <svg class="cow-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
               <ellipse cx="32" cy="35" rx="18" ry="14" fill="#FFD166" opacity="0.95"/>
               <circle cx="32" cy="22" r="9" fill="#FFD166" opacity="0.95"/>
               <circle cx="28" cy="22" r="1.5" fill="#0A1D37"/>
@@ -196,136 +216,125 @@
             </svg>
             <span class="logo-text">Siberian Pure</span>
           </div>
-          <p class="english-text active-lang" data-key="footer_text">Bringing the purest taste of Siberian nature to your table since 1975.</p>
-          <p class="russian-text" data-key="footer_text">Приносим чистейший вкус сибирской природы к вашему столу с 1975 года.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
+
+          <p data-en="Bringing the purest taste of Siberian nature to your table since 1975."
+             data-ru="Приносим чистейший вкус сибирской природы к вашему столу с 1975 года.">
+            Bringing the purest taste of Siberian nature to your table since 1975.
+          </p>
+
+          <div class="social-links" style="display:flex; gap:.6rem; margin-top:.8rem;">
+            <!-- social icons -->
+            <a href="#" class="social-icon" aria-label="Facebook (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" class="social-icon" aria-label="Twitter (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
           </div>
         </div>
 
-        <div class="footer-links">
-          <h4 class="english-text active-lang" data-key="quick_links_h4">Quick Links</h4>
-          <h4 class="russian-text" data-key="quick_links_h4">Быстрые Ссылки</h4>
-          <ul>
+        <div class="footer-links" style="flex:1 1 180px;">
+          <h4 data-en="Quick Links" data-ru="Быстрые Ссылки">Quick Links</h4>
+          <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
             <li><a href="products.html" data-en="Products" data-ru="Продукты">Products</a></li>
             <li><a href="ourstory.html" data-en="Our Story" data-ru="Наша История">Our Story</a></li>
             <li><a href="contactus.html" data-en="Contact" data-ru="Контакт">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-links">
-          <h4 class="english-text active-lang" data-key="products_h4">Products</h4>
-          <h4 class="russian-text" data-key="products_h4">Продукты</h4>
-          <ul>
-            <li><a href="#"><span class="english-text active-lang">Fresh Milk</span><span class="russian-text">Свежее Молоко</span></a></li>
-            <li><a href="#"><span class="english-text active-lang">Cheese</span><span class="russian-text">Сыр</span></a></li>
-            <li><a href="#"><span class="english-text active-lang">Yogurt</span><span class="russian-text">Йогурт</span></a></li>
-            <li><a href="#"><span class="english-text active-lang">Butter</span><span class="russian-text">Масло</span></a></li>
+
+        <div class="footer-links" style="flex:1 1 180px;">
+          <h4 data-en="Products" data-ru="Продукты">Products</h4>
+          <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
+            <li><a href="#" data-en="Fresh Milk" data-ru="Свежее Молоко">Fresh Milk</a></li>
+            <li><a href="#" data-en="Cheese" data-ru="Сыр">Cheese</a></li>
+            <li><a href="#" data-en="Yogurt" data-ru="Йогурт">Yogurt</a></li>
+            <li><a href="#" data-en="Butter" data-ru="Масло">Butter</a></li>
           </ul>
         </div>
 
-        <div class="footer-contact">
-          <h4 class="english-text active-lang" data-key="contact_h4">Contact Us</h4>
-          <h4 class="russian-text" data-key="contact_h4">Свяжитесь с Нами</h4>
-          <ul>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span class="english-text active-lang">Siberian Valley, Altai Region, Russia</span>
-              <span class="russian-text">Сибирская Долина, Алтайский край, Россия</span>
+        <div class="footer-contact" style="flex:1 1 220px;">
+          <h4 data-en="Contact Us" data-ru="Свяжитесь с Нами">Contact Us</h4>
+          <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
+            <li style="display:flex; gap:.5rem; align-items:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-en="Siberian Valley, Altai Region, Russia" data-ru="Сибирская Долина, Алтайский край, Россия">Siberian Valley, Altai Region, Russia</span>
             </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
+            <li style="display:flex; gap:.5rem; align-items:center; margin-top:.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>+7 (123) 456-7890</span>
             </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
+            <li style="display:flex; gap:.5rem; align-items:center; margin-top:.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <span>hello@siberianpure.com</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p><span class="english-text active-lang">&copy; 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia.</span><span class="russian-text">&copy; 2025 Siberian Pure. Все права защищены. Сделано с ❤️ из Сибири.</span></p>
+      <div class="footer-bottom" style="margin-top:1.4rem; text-align:left;">
+        <p data-en="© 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia."
+           data-ru="© 2025 Siberian Pure. Все права защищены. Сделано с ❤️ из Сибири.">
+          © 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia.
+        </p>
       </div>
     </div>
   </footer>
 
-<script>
-  let currentLang = 'en';
+  <script>
+    // Simple bilingual system using data-en / data-ru attributes.
+    // Default language: English ('en')
+    let currentLang = 'en';
 
-  function toggleLanguage() {
-    // Determine the new language
-    const newLang = currentLang === 'en' ? 'ru' : 'en';
-
-    // Update main text content visibility
-    document.querySelectorAll('.english-text').forEach(el => {
-      el.classList.remove('active-lang');
-      if (newLang === 'en') {
-        el.classList.add('active-lang');
-      }
-    });
-
-    document.querySelectorAll('.russian-text').forEach(el => {
-      el.classList.remove('active-lang');
-      if (newLang === 'ru') {
-        el.classList.add('active-lang');
-      }
-    });
-
-    // Update navigation and quick links text based on data attributes
-    document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
-      // Only update links that have language data attributes
-      if (link.hasAttribute(`data-${newLang}`)) {
-        const langText = link.getAttribute(`data-${newLang}`);
-        link.textContent = langText;
-      }
-    });
-    
-    // Update the current language state
-    currentLang = newLang;
-    
-    // Set HTML lang attribute
-    document.documentElement.lang = newLang;
-  }
-  
-  // Initial animation script (kept from original code)
-  document.addEventListener("DOMContentLoaded", () => {
-    const animateElements = document.querySelectorAll("[data-animate]");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
+    function applyLanguage() {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        // Preserve HTML tags inside data attributes (like <strong>)
+        const key = 'data-' + currentLang;
+        const val = el.getAttribute(key);
+        if (val !== null) {
+          // If the attribute contains HTML tags, set innerHTML; otherwise set textContent
+          // Use a small heuristic: if it contains '<' treat as HTML
+          if (val.includes('<')) {
+            el.innerHTML = val;
+          } else {
+            el.textContent = val;
+          }
         }
       });
-    }, { threshold: 0.2 });
-    animateElements.forEach(el => observer.observe(el));
-  });
-</script>
 
+      // Update lang attribute for accessibility
+      document.documentElement.lang = currentLang;
+
+      // Update toggle button label: show RU when current is EN, show EN when current is RU
+      const btn = document.getElementById('lang-toggle');
+      if (btn) {
+        btn.textContent = currentLang === 'en' ? 'РУ' : 'EN';
+        btn.setAttribute('aria-pressed', currentLang === 'ru' ? 'true' : 'false');
+      }
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ru' : 'en';
+      applyLanguage();
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLanguage();
+
+      // Intersection animation placeholders (keeps your original behavior)
+      const animateElements = document.querySelectorAll('[data-animate]');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        animateElements.forEach(el => observer.observe(el));
+      } else {
+        // fallback: just add class
+        animateElements.forEach(el => el.classList.add('active'));
+      }
+    });
+  </script>
 </body>
 </html>
