@@ -1590,27 +1590,3 @@ ______________________________ */
   object-fit: cover; /* Important */
   border-radius: 12px;
 }
-
-.mobile-hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
- .mobile-hero-section img {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .mobile-hero-section .text-content {
-    width: 100%;
-  }
-}
