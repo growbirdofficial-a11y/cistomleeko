@@ -286,7 +286,7 @@ body {
     background: linear-gradient(to top, rgba(91, 192, 235, 0.3), transparent);
 }
 
-.floating-cow {
+/* .floating-cow {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -304,7 +304,7 @@ body {
     width: 64px;
     height: 64px;
     animation: float2 5s ease-in-out infinite;
-}
+} */
 
 @keyframes float1 {
     0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -521,7 +521,7 @@ section {
 
 /* About Section */
 .about-section {
-    background: white;
+    background: linear-gradient(180deg, white 0%, #b5f1fd 100%);
 }
 
 .about-grid {
@@ -641,7 +641,7 @@ section {
 
 /* Testimonials Section */
 .testimonials-section {
-    background: linear-gradient(to bottom, rgba(91, 192, 235, 0.05), white);
+    background: linear-gradient( rgb(186, 239, 251), white);
 }
 
 .testimonials-carousel {
@@ -1590,3 +1590,129 @@ ______________________________ */
   object-fit: cover; /* Important */
   border-radius: 12px;
 }
+
+/* MAIN SECTION */
+.industry-section {
+  padding: 80px 0;
+  text-align: center;
+  background: white;
+}
+
+/* SUBTEXT (BIGGER + CLEANER) */
+.industry-subtext {
+  max-width: 850px;
+  margin: 20px auto 50px;
+  color: #444;
+  font-size: 1.35rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+
+/* STAT BOX */
+.industry-stats {
+  margin-bottom: 60px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 45px 55px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.stat-box h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2A4D69;
+  margin-bottom: 15px;
+}
+
+.stat-box p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #555;
+}
+
+/* GALLERY (MORE PREMIUM LOOK) */
+.industry-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.gallery-item {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.035);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Appreciation Text */
+.industry-appreciation,
+.industry-appreciation-2 {
+  max-width: 900px;
+  margin: 40px auto;
+  font-size: 1.35rem;
+  color: #79b6ef;
+  line-height: 2.15rem;
+  font-weight: 550;
+}
+
+/* .industry-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.industry-subtext {
+  max-width: 700px;
+  margin: 10px auto 40px;
+  color: #555;
+}
+
+.industry-stats {
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.industry-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+} */
+
