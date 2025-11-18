@@ -379,7 +379,7 @@ section {
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:fill;
 }
 
 .product-content {
@@ -1636,7 +1636,8 @@ ______________________________ */
 
 .product-card img {
   width: 100%;
-  border-radius: 12px;
+  height: 286px;
+  border-radius: 0px;
 }
 
 .carousel-btn {
@@ -1891,7 +1892,7 @@ ______________________________ */
   }
 
   .product-image img {
-    height: 220px;
+    height: 300px;
     object-fit: cover;
   }
 }
