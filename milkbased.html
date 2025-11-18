@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milk Based Products - Siberian Pure</title>
+  <title>Milk Based Products - CistoMleko</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
     <header class="header">
       <nav class="nav">
         <div class="logo">
-          <a href="index.html"><img src="images/logo1.png" alt="Siberian Pure Logo" style="height:60px;"></a>
+          <a href="index.html"><img src="images/logo1.png" alt="CistoMleko Logo" style="height:60px;"></a>
         </div>
         <div class="nav-links">
           <a href="index.html">Home</a>
@@ -31,7 +31,7 @@
     <div class="container">
       <div class="section-header">
         <h2>Milk Based Products</h2>
-        <p>Freshly made dairy products that bring authentic Siberian taste to your home.</p>
+        <p>Freshly made dairy products that bring authentic Serbian taste to your home.</p>
       </div>
 
       <div class="carousel-track">
@@ -62,7 +62,7 @@
           </div>
           <div class="product-content">
             <h3>Condensed Milk</h3>
-            <p>Rich, creamy condensed milk crafted from pure Siberian dairy.</p>
+            <p>Rich, creamy condensed milk crafted from pure CistoMleko dairy.</p>
            
           </div>
         </div>
@@ -83,9 +83,20 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2025 Siberian Pure. All rights reserved.</p>
+        <p>&copy; 2004 CistoMleko. All rights reserved.</p>
       </div>
     </div>
   </footer>
+  <script>
+  const mobileBtn = document.querySelector(".mobile-menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (mobileBtn) {
+    mobileBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
+</script>
+
 </body>
 </html>

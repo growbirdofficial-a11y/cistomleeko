@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siberian Pure - Contact Us</title>
+  <title>CistoMleko- Kontakt</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     /* ---------- Contact Page Enhancements ---------- */
@@ -138,79 +138,88 @@
   </style>
 </head>
 <body>
+  <!-- HERO + HEADER -->
   <div class="hero">
-        <div class="hero-bg-animation">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
+    <div class="hero-bg-animation">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo1.png" alt="CistoMleko Logo" style="height: 60px;">
+          </a>
         </div>
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 60px;">
-        </a>
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="ourstory.html">Our Story</a>
-        <a href="contactus.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+        <div class="nav-links" role="navigation" aria-label="Main navigation">
+          <a href="index.html" data-en="Home" data-sr="Početna">Početna</a>
+          <a href="products.html" data-en="Products" data-sr="Proizvodi">Proizvodi</a>
+          <a href="ourstory.html" data-en="Our Story" data-sr="Naša priča">Naša priča</a>
+          <a href="contactus.html" class="active" data-en="Contact" data-sr="Kontakt">Kontakt</a>
+
+          <button class="language-toggle" id="lang-toggle" aria-pressed="true" onclick="toggleLanguage()">EN</button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰ Menu</button>
+      <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+        <button id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <a href="index.html">Početna</a>
+        <a href="products.html">Proizvodi</a>
+        <a href="ourstory.html">Naša priča</a>
+        <a href="contactus.html">Kontakt</a>
+        <button class="language-toggle" onclick="toggleLanguage()">EN/SR</button>
+      </nav>
+    </header>
+  </div>
 
   <!-- Contact Section -->
   <section class="contact-section">
     <div class="section-header">
-      <h2>CONTACT US</h2>
-      <p>We’d love to hear from you. Whether you’re a customer, partner, or just curious — we’re here to help.</p>
+      <h2 data-en="CONTACT US" data-sr="KONTAKT">KONTAKT</h2>
+      <p data-en="We’d love to hear from you. Whether you’re a customer, partner, or just curious — we’re here to help."
+         data-sr="Rado ćemo čuti od vas. Bilo da ste kupac, partner ili radoznali — ovde smo da pomognemo.">
+        Rado ćemo čuti od vas. Bilo da ste kupac, partner ili radoznali — ovde smo da pomognemo.
+      </p>
     </div>
 
     <div class="contact-grid">
       <div class="contact-info">
-        <h3>Get in Touch</h3>
-        <p><strong>Email:</strong> hello@siberianpure.com</p>
-        <p><strong>Phone:</strong> +7 495 123 4567</p>
-        <p><strong>Address:</strong> 123 Siberian Valley Road, Novosibirsk, Russia</p>
+        <h3 data-en="Get in Touch" data-sr="Kontaktirajte nas">Kontaktirajte nas</h3>
+        <p><strong data-en="Email" data-sr="Email" >Email:</strong> info.cistomleko@gmail.com </p>
+        <p><strong data-en="Telephone" data-sr="Telefon">Telefon:</strong> +7 495 123 4567</p>
+        <p><strong data-en="Address" data-sr="Telefon">Adresa:</strong> Cara lraklija 52,11 040 Belgrade,serbia</p>
       </div>
 
-     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-
-  <!-- Your Access Key -->
-  <input type="hidden" name="access_key" value="72fee932-737f-40f5-915a-59369872ad39">
-
-  <!-- Optional success redirect -->
-  <input type="hidden" name="redirect" value="https://cistomleko.com/thank-you.html">
-
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="tel" name="phone" placeholder="Phone Number" required />
-
-  <select name="country" required>
-    <option value="" disabled selected>Select Country</option>
-    <option value="Russia">Russia</option>
-    <option value="India">India</option>
-    <option value="Europe">Europe</option>
-    <option value="Middle East">Middle East</option>
-    <option value="Asia-Pacific">Asia-Pacific</option>
-    <option value="North America">North America</option>
-    <option value="South America">South America</option>
-    <option value="Africa">Africa</option>
-    <option value="Other">Other</option>
-  </select>
-
-  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="72fee932-737f-40f5-915a-59369872ad39">
+        <input type="hidden" name="redirect" value="https://cistomleko.com/thank-you.html">
+        <input type="text" name="name" placeholder="Vaše ime" required />
+        <input type="email" name="email" placeholder="Vaš email" required />
+        <input type="tel" name="phone" placeholder="Telefon" required />
+        <select name="country" required>
+          <option value="" disabled selected data-en="Select Country" data-sr="Izaberite državu">Izaberite državu</option>
+          <option value="Russia">Russia</option>
+          <option value="India">India</option>
+          <option value="Europe">Europe</option>
+          <option value="Middle East">Middle East</option>
+          <option value="Asia-Pacific">Asia-Pacific</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Africa">Africa</option>
+          <option value="Other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Vaša poruka" rows="6" required></textarea>
+        <button type="submit" class="btn-primary" data-en="Send Message" data-sr="Pošalji poruku">Pošalji poruku</button>
+      </form>
     </div>
 
-    <!-- Google Map -->
+    <!-- Map Section -->
     <div class="map-section">
-      <h3>Find Us Here</h3>
+      <h3 data-en="Find Us Here" data-sr="Pronađite nas ovde">Pronađite nas ovde</h3>
       <div class="map-container">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46307.140945319265!2d82.9239656!3d55.0282179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe56c49f24e5f%3A0x400c43213d0d1e0!2sNovosibirsk%2C%20Russia!5e0!3m2!1sen!2sin!4v1699970046200!5m2!1sen!2sin"
@@ -228,63 +237,97 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo">
-            <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 50px;">
+            <img src="images/logo.png" alt="Serbian Pure Logo" style="height: 50px;">
           </div>
-          <p>Bringing the purest taste of Siberian nature to your table since 1975.</p>
+          <p data-en="Bringing the purest taste of CistoMleko nature to your table since 1975."
+             data-sr="Donosimo najčistiji ukus sibirske prirode na vaš sto od 1975.">
+            Donosimo najčistiji ukus sibirske prirode na vaš sto od 1975.
+          </p>
           <div class="social-links">
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">IG</a>
+            <a href="#" class="social-icon">TW</a>
           </div>
         </div>
 
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-en="Quick Links" data-sr="Brze veze">Brze veze</h4>
           <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="ourstory.html">About Us</a></li>
-            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="products.html" data-en="Products" data-sr="Proizvodi">Proizvodi</a></li>
+            <li><a href="ourstory.html" data-en="About Us" data-sr="O nama">O nama</a></li>
+            <li><a href="contactus.html" data-en="Contact" data-sr="Kontakt">Kontakt</a></li>
           </ul>
         </div>
 
         <div class="footer-links">
-          <h4>Products</h4>
+          <h4 data-en="Products" data-sr="Proizvodi">Proizvodi</h4>
           <ul>
-            <li><a href="#">Fresh Milk</a></li>
-            <li><a href="#">Cheese</a></li>
-            <li><a href="#">Yogurt</a></li>
-            <li><a href="#">Butter</a></li>
+            <li><a href="#" data-en="Fresh Milk" data-sr="Sveže mleko">Sveže mleko</a></li>
+            <li><a href="#" data-en="Cheese" data-sr="Sir">Sir</a></li>
+            <li><a href="#" data-en="Yogurt" data-sr="Jogurt">Jogurt</a></li>
+            <li><a href="#" data-en="Butter" data-sr="Maslac">Maslac</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
-          <h4>Contact Us</h4>
+          <h4 data-en="Contact Us" data-sr="Kontakt">Kontakt</h4>
           <ul>
-            <li>Siberian Valley, Altai Region, Russia</li>
+            <li data-en="Cara lraklija 52,11 040 Belgrade,serbia" data-sr="Cara lraklija 52,11 040 Beograd, srbija">Cara lraklija 52,11 040 Belgrade,serbia</li>
             <li>+7 (123) 456-7890</li>
-            <li>hello@siberianpure.com</li>
+            <li>info.cistomleko@gmail.com</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia.</p>
+        <p data-en="© 2025 CistoMleko. All rights reserved. Made with ❤️ from Serbia."
+           data-sr="© 2025 CistoMleko . Sva prava zadržana. Napravljeno sa ❤️ iz Serbija.">
+          © 2004 CistoMleko. Sva prava zadržana. Napravljeno sa ❤️ iz Serbija.
+        </p>
       </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const mobilePanel = document.getElementById("mobileMenuPanel");
+      const mobileClose = document.getElementById("mobileMenuClose");
+      if (mobileBtn && mobilePanel && mobileClose) {
+        mobileBtn.addEventListener("click", () => {
+          mobilePanel.classList.add("open");
+          mobilePanel.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        });
+        mobileClose.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          mobilePanel.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        });
+      }
+    });
+
+    // Language toggle
+    let currentLang = 'sr'; // default Serbian
+    function applyLanguage() {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const val = el.getAttribute('data-' + currentLang);
+        if(val) el.innerHTML = val.includes('<') ? val : val;
+      });
+      document.documentElement.lang = currentLang;
+      const btn = document.getElementById('lang-toggle');
+      if(btn) {
+        btn.textContent = currentLang === 'en' ? 'SR' : 'EN';
+        btn.setAttribute('aria-pressed', currentLang === 'en' ? 'false' : 'true');
+      }
+    }
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'sr' : 'en';
+      applyLanguage();
+    }
+    document.addEventListener('DOMContentLoaded', applyLanguage);
+  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delicious Products - Siberian Pure</title>
+  <title>Delicious Products - CistoMleko</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
     <header class="header">
       <nav class="nav">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="Siberian Pure Logo" style="height:60px;"></a>
+          <a href="index.html"><img src="images/logo.png" alt="CistoMleko Pure Logo" style="height:60px;"></a>
         </div>
         <div class="nav-links">
           <a href="index.html">Home</a>
@@ -84,9 +84,20 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2025 Siberian Pure. All rights reserved.</p>
+        <p>&copy; 2004 CistoMleko Pure. All rights reserved.</p>
       </div>
     </div>
   </footer>
+  <script>
+  const mobileBtn = document.querySelector(".mobile-menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (mobileBtn) {
+    mobileBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
+</script>
+
 </body>
 </html>

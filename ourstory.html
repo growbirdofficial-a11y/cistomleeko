@@ -1,43 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siberian Pure - Our Story</title>
+  <title data-en="CistoMleko - Our Story" data-sr="CistoMleko - Naša Priča">CistoMleko- Naša Priča</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- <style>
-    /* Lightweight language toggle styling so it blends with nav */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .language-toggle {
-      background: transparent;
-      border: 1px solid rgba(10,29,55,0.08);
-      padding: 0.45rem 0.7rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    /* Keep layout safe if styles.css doesn't include these classes */
-    .hero { position: relative; padding-bottom: 2rem; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
-    .reverse-grid { grid-template-columns: 1fr 1fr; }
-    .about-image img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
-    .stats-grid, .stats-grid .stat, .about-label { display: flex; gap: 0.5rem; align-items: center; }
-    .stats-grid { margin-top: 1.6rem; gap: 1.2rem; flex-wrap: wrap; display:flex; }
-    .stat { flex: 1 1 150px; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; }
-    .stat-number { font-size: 1.4rem; font-weight: 800; }
-    /* small-screen fallback */
-    @media (max-width: 880px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .nav-links { gap: .6rem; }
-    }
-  </style> -->
 </head>
 <body>
   <div class="hero">
@@ -50,18 +17,34 @@
       <nav class="nav container">
         <div class="logo">
           <a href="index.html" class="logo">
-            <img src="images/logo1.png" alt="Siberian Pure Logo" style="height: 60px;">
+            <img src="images/logo1.png" alt="CistoMleko Logo" style="height: 60px;">
           </a>
         </div>
 
         <div class="nav-links" role="navigation" aria-label="Main navigation">
-          <a href="index.html" data-en="Home" data-ru="Главная">Home</a>
-          <a href="products.html" data-en="Products" data-ru="Продукты">Products</a>
-          <a href="ourstory.html" class="active" data-en="Our Story" data-ru="Наша История">Our Story</a>
-          <a href="contactus.html" data-en="Contact" data-ru="Контакт">Contact</a>
+          <a href="index.html" data-en="Home" data-sr="Početna">Početna</a>
+          <a href="products.html" data-en="Products" data-sr="Proizvodi">Proizvodi</a>
+          <a href="ourstory.html" class="active" data-en="Our Story" data-sr="Naša Priča">Naša Priča</a>
+          <a href="contactus.html" data-en="Contact" data-sr="Kontakt">Kontakt</a>
 
-          <button class="language-toggle" id="lang-toggle" aria-pressed="false" onclick="toggleLanguage()">РУ</button>
+          <!-- desktop toggle (shows EN when current is sr) -->
+          <button class="language-toggle" id="lang-toggle" aria-pressed="false" onclick="toggleLanguage()">EN</button>
         </div>
+      </nav>
+
+      <!-- Mobile menu button (visible only on small screens) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        ☰ Menu
+      </button>
+      <!-- Mobile menu panel -->
+      <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+        <button id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <a href="index.html">Početna</a>
+        <a href="products.html">Proizvodi</a>
+        <a href="ourstory.html">Naša Priča</a>
+        <a href="contactus.html">Kontakt</a>
+        <!-- static mobile toggle as requested -->
+        <button class="language-toggle">SR/EN</button>
       </nav>
     </header>
   </div>
@@ -76,51 +59,51 @@
               <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
               <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
             </svg>
-            <span data-en="OUR STORY" data-ru="НАША ИСТОРИЯ">OUR STORY</span>
+            <span data-en="OUR STORY" data-sr="NAŠA PRIČA">NAŠA PRIČA</span>
           </div>
 
-          <h2 data-en="FROM SIBERIAN PASTURES TO YOUR TABLE" data-ru="С Сибирских Пастбищ К Вашему Столу">
-            FROM SIBERIAN PASTURES TO YOUR TABLE
+          <h2 data-en="FROM SERBIAN PASTURES TO YOUR TABLE" data-sr="SA SIBIRSKIH PAŠNJAKA DO VAŠEG STOLA">
+            SA SIBIRSKIH PAŠNJAKA DO VAŠEG STOLA
           </h2>
 
           <div class="about-content">
-            <p data-en="Our journey began in the heart of Siberia — a land of pristine nature, clean air, and boundless meadows."
-               data-ru="Наш путь начался в самом сердце Сибири — крае первозданной природы, чистого воздуха и бескрайних лугов.">
-              Our journey began in the heart of Siberia — a land of pristine nature, clean air, and boundless meadows.
+            <p data-en="Our journey began in the heart of Serbia — a land of pristine nature, clean air, and boundless meadows."
+               data-sr="Naše putovanje počelo je u srcu Sibira — zemlji netaknute prirode, čistog vazduha i beskrajnih pašnjaka.">
+              Naše putovanje počelo je u srcu Sibira — zemlji netaknute prirode, čistog vazduha i beskrajnih pašnjaka.
             </p>
 
             <p data-en="For over five decades, we’ve raised happy, healthy cows in an environment that nourishes them naturally. Their milk forms the heart of our products, bringing pure taste and health to families around the world."
-               data-ru="Более пяти десятилетий мы выращиваем счастливых, здоровых коров в естественной среде. Их молоко лежит в основе наших продуктов, принося чистый вкус и здоровье семьям по всему миру.">
-              For over five decades, we’ve raised happy, healthy cows in an environment that nourishes them naturally. Their milk forms the heart of our products, bringing pure taste and health to families around the world.
+               data-sr="Više od pet decenija uzgajamo srećne i zdrave krave u okruženju koje ih prirodno neguje. Njihovo mleko čini srce naših proizvoda, donoseći čist ukus i zdravlje porodicama širom sveta.">
+              Više od pet decenija uzgajamo srećne i zdrave krave u okruženju koje ih prirodno neguje. Njihovo mleko čini srce naših proizvoda, donoseći čist ukus i zdravlje porodicama širom sveta.
             </p>
 
             <p data-en="We believe that true quality comes from care — care for animals, people, and the planet."
-               data-ru="Мы верим, что истинное качество рождается из заботы — заботы о животных, людях и планете.">
-              We believe that true quality comes from care — care for animals, people, and the planet.
+               data-sr="Verujemo da prava kvaliteta potiče iz brige — brige za životinje, ljude i planetu.">
+              Verujemo da prava kvaliteta potiče iz brige — brige za životinje, ljude i planetu.
             </p>
           </div>
 
           <div class="stats-grid" aria-hidden="false">
             <div class="stat">
               <div class="stat-number">50+</div>
-              <div class="stat-label" data-en="Years of Heritage" data-ru="Лет Наследия">Years of Heritage</div>
+              <div class="stat-label" data-en="Years of Heritage" data-sr="Godina Tradicije">Godina Tradicije</div>
             </div>
 
             <div class="stat">
               <div class="stat-number">100%</div>
-              <div class="stat-label" data-en="Organic Ingredients" data-ru="Органические Ингредиенты">Organic Ingredients</div>
+              <div class="stat-label" data-en="Organic Ingredients" data-sr="Organski Sastojci">Organski Sastojci</div>
             </div>
 
             <div class="stat">
-              <div class="stat-number">500+</div>
-              <div class="stat-label" data-en="Happy Cows" data-ru="Счастливых Коров">Happy Cows</div>
+              <div class="stat-number">18000+</div>
+              <div class="stat-label" data-en="Happy Cows" data-sr="Srećne Krave">Srećne Krave</div>
             </div>
           </div>
         </div>
 
         <div class="about-image-wrapper">
           <div class="about-image">
-            <img src="https://i.ibb.co/0V6hZ17x/young-woman-standing-with-milk-jug-cowshed.jpg" alt="Siberian Farm" />
+            <img src="https://i.ibb.co/0V6hZ17x/young-woman-standing-with-milk-jug-cowshed.jpg" alt="CistoMleko Farm" />
           </div>
           <div class="about-decoration"></div>
         </div>
@@ -134,7 +117,7 @@
       <div class="about-grid reverse-grid" style="align-items:center;">
         <div class="about-image-wrapper" data-animate="fade-right">
           <div class="about-image">
-            <img src="https://i.ibb.co/5X4h9tcS/pexels-shvetsa-5953772.jpg" alt="Siberian Dairy Farm" />
+            <img src="https://i.ibb.co/5X4h9tcS/pexels-shvetsa-5953772.jpg" alt="CistoMleko Dairy Farm" />
           </div>
         </div>
 
@@ -144,96 +127,101 @@
               <ellipse cx="32" cy="35" rx="18" ry="14" fill="#5BC0EB" opacity="0.95" />
               <circle cx="32" cy="22" r="9" fill="#5BC0EB" opacity="0.95" />
             </svg>
-            <span data-en="OUR LEGACY" data-ru="НАШЕ НАСЛЕДИЕ">OUR LEGACY</span>
+            <span data-en="OUR LEGACY" data-sr="NAŠE NASLEĐE">NAŠE NASLEĐE</span>
           </div>
 
-          <h2 data-en="OUR LEGACY OF EXCELLENCE" data-ru="Наше Наследие Превосходства">OUR LEGACY OF EXCELLENCE</h2>
+          <h2 data-en="OUR LEGACY OF EXCELLENCE" data-sr="NAŠE NASLEĐE IZVRSNOSTI">NAŠE NASLEĐE IZVRSNOSTI</h2>
 
           <div class="about-content">
-            <p data-en="Founded in <strong>1990</strong>, Siberian Pure has grown from a small family-owned dairy farm into one of Siberia’s most trusted milk producers."
-               data-ru="Основанная в <strong>1990</strong> году, компания Siberian Pure выросла из небольшой семейной молочной фермы в одного из самых надежных производителей молока в Сибири.">
-              Founded in <strong>1990</strong>, Siberian Pure has grown from a small family-owned dairy farm into one of Siberia’s most trusted milk producers.
+            <p data-en="Founded in <strong>1990</strong>, CistoMleko has grown from a small family-owned dairy farm into one of Serbia’s most trusted milk producers."
+               data-sr="Osnovan 1990. godine, CistoMleko je izrastao iz male porodične mlečne farme u jednog od najpouzdanijih proizvođača mleka u Sibiru.">
+              Osnovan 1990. godine, Cisto Mleko je izrastao iz male porodične mlečne farme u jednog od najpouzdanijih proizvođača mleka u Sibiru.
             </p>
 
             <p data-en="Our milk is <strong>100% organic</strong>, produced under the <strong>supervision of experts</strong> who ensure every process — from feeding to packaging — meets the highest quality standards."
-               data-ru="Наше молоко является <strong>100% органическим</strong> и производится под <strong>контролем экспертов</strong>, которые гарантируют, что каждый процесс — от кормления до упаковки — соответствует высочайшим стандартам качества.">
-              Our milk is <strong>100% organic</strong>, produced under the <strong>supervision of experts</strong> who ensure every process — from feeding to packaging — meets the highest quality standards.
+               data-sr="Naše mleko je <strong>100% organsko</strong>, proizvedeno pod <strong>nadzorom stručnjaka</strong> koji osiguravaju da svaki proces — od ishrane do pakovanja — ispunjava najviše standarde kvaliteta.">
+              Naše mleko je <strong>100% organsko</strong>, proizvedeno pod <strong>nadzorom stručnjaka</strong> koji osiguravaju da svaki proces — od ishrane do pakovanja — ispunjava najviše standarde kvaliteta.
             </p>
 
-            <p data-en="We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk, proudly rated as <strong>Siberia’s No.1</strong>."
-               data-ru="Мы глубоко заботимся о наших коровах, проводя <strong>регулярные медицинские осмотры</strong> для поддержания их здоровья. Эта забота отражается во вкусе и чистоте нашего молока, которое с гордостью признано <strong>№1 в Сибири</strong>.">
-              We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk, proudly rated as <strong>Siberia’s No.1</strong>.
+            <p data-en="We care deeply for our cows, conducting <strong>regular medical checkups</strong> to maintain their health and well-being. This care reflects in the taste and purity of our milk."
+               data-sr="Duboko se brinemo o našim kravama — sprovodimo <strong>redovne zdravstvene preglede</strong> kako bismo održali njihovo zdravlje i dobrobit. Ta briga ogleda se u ukusu i čistoći našeg mleka.">
+              Duboko se brinemo o našim kravama — sprovodimo <strong>redovne zdravstvene preglede</strong> kako bismo održali njihovo zdravlje i dobrobit. Ta briga ogleda se u ukusu i čistoći našeg mleka.
             </p>
 
-            <p data-en="With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, Siberian Pure operates major centers across <strong>Russia and Europe</strong>."
-               data-ru="Благодаря более чем <strong>2200 квалифицированным работникам</strong> и сотрудничеству с многочисленными агентствами, Siberian Pure управляет крупными центрами по всей <strong>России и Европе</strong>.">
-              With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, Siberian Pure operates major centers across <strong>Russia and Europe</strong>.
+            <p data-en="With over <strong>2200 skilled workers</strong> and collaborations with numerous agencies, CistoMleko operates major centers across <strong>Russia and Europe</strong>."
+               data-sr="Sa više od <strong>2200 kvalifikovanih radnika</strong> i saradnjom sa brojnim agencijama, Cisto Mleko upravlja velikim centrima širom <strong>Rusije i Evrope</strong>.">
+              Sa više od <strong>2200 kvalifikovanih radnika</strong> i saradnjom sa brojnim agencijama, CistoMleko upravlja velikim centrima širom <strong>Rusije i Evrope</strong>.
             </p>
 
-            <p data-en="Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic Siberian taste across the globe."
-               data-ru="Сегодня наша приверженность чистоте и совершенству позволила нам достичь более <strong>1 крор+</strong> в международном бизнесе, распространяя подлинный сибирский вкус по всему миру.">
-              Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic Siberian taste across the globe.
+            <p data-en="Today, our commitment to purity and excellence has led us to achieve over <strong>1 crore+</strong> in international business, spreading the authentic serbian taste across the globe."
+               data-sr="Danas nam je posvećenost čistoći i izvrsnosti omogućila da postignemo preko <strong>1 crore+</strong> u međunarodnom poslovanju, šireći autentičan sibirski ukus širom sveta.">
+              Danas nam je posvećenost čistoći i izvrsnosti omogućila da postignemo preko <strong>1 crore+</strong> u međunarodnom poslovanju, šireći autentičan sibirski ukus širom sveta.
             </p>
           </div>
-        </div>
-      </div>
-
-      
-
-  <section class="ceo-section">
-    <div class="container ceo-container">
-
-        <!-- CEO CONTENT -->
-        <div class="ceo-content">
-           <h2 class="ceo-title"
-    data-en="Our Ceo"
-    data-ru="Наш генеральный директор">
-   Our Ceo
-</h2>
-
-
-            <p class="ceo-text"
-                data-en="Our company continues to grow and evolve under the remarkable leadership of MR. BRANKO, whose vision and dedication have shaped the foundation of everything we stand for. His ability to think beyond the present, anticipate future possibilities, and inspire people with clarity and purpose has not only strengthened our organisation but has also created a culture where innovation, teamwork, and excellence thrive naturally. What makes his leadership truly exceptional is the balance he maintains between strategic decision-making and genuine human connection. He listens, understands, and empowers every team member to reach their fullest potential. His strong belief in quality, ethics, and long-term sustainable growth reflects in every initiative and achievement of our company. Working under his guidance is not just a professional experience but a continuous learning journey that motivates all of us to perform better each day. His humility, passion, and unwavering commitment to our mission make him not just a leader, but the guiding force behind our collective success. We feel privileged to be part of an organisation led by such a visionary, whose influence continues to inspire every step we take."
-                
-                data-ru="Наша компания продолжает расти и развиваться под выдающимся руководством Мистер Бранко, чье видение и преданность сформировали основу всего, что мы представляем. Его способность думать за пределами настоящего, предвидеть будущие возможности и вдохновлять людей ясностью и целью не только укрепили нашу организацию, но и создали культуру, где инновации, командная работа и стремление к совершенству развиваются естественно. Что делает его лидерство по-настоящему исключительным — это гармония между стратегическим мышлением и искренней человеческой заботой. Он слушает, понимает и вдохновляет каждого члена команды раскрывать свой полный потенциал. Его вера в качество, этику и устойчивый долгосрочный рост отражается в каждой инициативе и каждом достижении нашей компании. Работать под его руководством — это не просто профессиональный опыт, а постоянное путешествие обучения, которое мотивирует нас становиться лучше каждый день. Его скромность, страсть и непоколебимая приверженность нашей миссии делают его не просто руководителем, а движущей силой нашего коллективного успеха. Мы гордимся тем, что являемся частью организации, которой руководит такой дальновидный лидер, чье влияние вдохновляет каждый наш шаг.">
-                
-                Our company continues to grow and evolve under the remarkable leadership...
-            </p>
-
-            <p class="ceo-signature"
-                data-en="— With respect and gratitude, Team Cisto Mleko"
-                data-ru="— С уважением и благодарностью, команда Cisto Mleko">
-                — With respect and gratitude, Team Cisto Mleko
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<div class="stats-grid" data-animate="fade-in" style="margin-top:1.4rem;">
-        <div class="stat">
-          <div class="stat-number">1990</div>
-          <div class="stat-label" data-en="Established" data-ru="Основан">Established</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">2200+</div>
-          <div class="stat-label" data-en="Workers" data-ru="Работники">Workers</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">1 Cr+</div>
-          <div class="stat-label" data-en="Foreign Business" data-ru="Зарубежный Бизнес">Foreign Business</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">No.1</div>
-          <div class="stat-label" data-en="Milk Brand in Siberia" data-ru="Молочный Бренд №1 в Сибири">Milk Brand in Siberia</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CEO SECTION -->
+  <!-- <section class="ceo-section">
+    <div class="container ceo-container">
+      <div class="ceo-content">
+        <h2 class="ceo-title" data-en="Our Ceo" data-sr="Naš Direktor">Naš Direktor</h2>
+
+        <p class="ceo-text"
+           data-en="Our company continues to grow and evolve under the remarkable leadership of MR. BRANKO, whose vision and dedication have shaped the foundation of everything we stand for..."
+           data-sr="Naša kompanija nastavlja da raste i razvija se pod izvanrednim vođstvom gospodina Branka, čija je vizija i posvećenost oblikovala temelje svega za šta se zalažemo. Njegova sposobnost da razmišlja izvan sadašnjosti, predviđa buduće mogućnosti i inspiriše ljude jasnoćom i svrhom ne samo da je ojačala našu organizaciju već i stvorila kulturu u kojoj inovacije, timski rad i težnja ka izvrsnosti prirodno napreduju. Ono što čini njegovo liderstvo zaista izuzetnim je balans između strateškog odlučivanja i iskrene ljudske povezanosti. On sluša, razume i osnažuje svakog člana tima da ostvari svoj puni potencijal. Njegovo snažno verovanje u kvalitet, etiku i dugoročni održivi rast ogleda se u svakoj inicijativi i dostignuću naše kompanije. Rad pod njegovim vođstvom nije samo profesionalno iskustvo već kontinuirano putovanje učenja koje nas motiviše da svakog dana budemo bolji. Njegova skromnost, strast i nepokolebljiva posvećenost našoj misiji čine ga ne samo liderom, već pokretačkom snagom našeg zajedničkog uspeha. Ponosni smo što smo deo organizacije koju vodi takav vizionar čiji uticaj inspiriše svaki naš korak.">
+          Naša kompanija nastavlja da raste i razvija se pod izvanrednim vođstvom gospodina Branka, čija je vizija i posvećenost oblikovala temelje svega za šta se zalažemo. Njegova sposobnost da razmišlja izvan sadašnjosti, predviđa buduće mogućnosti i inspiriše ljude jasnoćom i svrhom ne samo da je ojačala našu organizaciju već i stvorila kulturu u kojoj inovacije, timski rad i težnja ka izvrsnosti prirodno napreduju. Ono što čini njegovo liderstvo zaista izuzetnim je balans između strateškog odlučivanja i iskrene ljudske povezanosti. On sluša, razume i osnažuje svakog člana tima da ostvari svoj puni potencijal. Njegovo snažno verovanje u kvalitet, etiku i dugoročni održivi rast ogleda se u svakoj inicijativi i dostignuću naše kompanije. Rad pod njegovim vođstvom nije samo profesionalno iskustvo već kontinuirano putovanje učenja koje nas motiviše da svakog dana budemo bolji. Njegova skromnost, strast i nepokolebljiva posvećenost našoj misiji čine ga ne samo liderom, već pokretačkom snagom našeg zajedničkog uspeha. Ponosni smo što smo deo organizacije koju vodi takav vizionar čiji uticaj inspiriše svaki naš korak.
+        </p>
+
+        <p class="ceo-signature" data-en="— With respect and gratitude, Team Cisto Mleko" data-sr="— Sa poštovanjem i zahvalnošću, tim Cisto Mleko">
+          — Sa poštovanjem i zahvalnošću, tim Cisto Mleko
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CEO SECTION -->
+<section class="ceo-section">
+  <div class="container ceo-container">
+    <div class="ceo-content">
+      <h2 class="ceo-title" data-en="Our CEO" data-sr="Naš Direktor">Naš Direktor</h2>
+
+      <p class="ceo-text"
+         data-en="Our company continues to grow and evolve under the remarkable leadership of MR. BRANKO, whose vision and dedication have shaped the foundation of everything we stand for. His ability to think beyond the present, anticipate future possibilities, and inspire people with clarity and purpose has not only strengthened our organisation but has also created a culture where innovation, teamwork, and excellence thrive naturally. What makes his leadership truly exceptional is the balance he maintains between strategic decision-making and genuine human connection. He listens, understands, and empowers every team member to reach their fullest potential. His strong belief in quality, ethics, and long-term sustainable growth reflects in every initiative and achievement of our company. Working under his guidance is not just a professional experience but a continuous learning journey that motivates all of us to perform better each day. His humility, passion, and unwavering commitment to our mission make him not just a leader, but the guiding force behind our collective success. We feel privileged to be part of an organisation led by such a visionary, whose influence continues to inspire every step we take."
+         
+         data-sr="Naša kompanija nastavlja da raste i razvija se pod izvanrednim vođstvom gospodina Branka, čija su vizija i posvećenost oblikovali temelje svega za šta se zalažemo. Njegova sposobnost da razmišlja izvan sadašnjosti, predviđa buduće mogućnosti i inspiriše ljude jasnoćom i svrhom ne samo da je ojačala našu organizaciju, već je stvorila i kulturu u kojoj inovacije, timski rad i težnja ka izvrsnosti prirodno napreduju. Ono što njegovo liderstvo čini zaista izuzetnim jeste ravnoteža koju održava između strateškog donošenja odluka i iskrene ljudske povezanosti. On sluša, razume i osnažuje svakog člana tima da dostigne svoj puni potencijal. Njegova snažna vera u kvalitet, etiku i dugoročni održivi rast odražava se u svakoj inicijativi i dostignuću naše kompanije. Rad pod njegovim vođstvom nije samo profesionalno iskustvo, već kontinuirano putovanje učenja koje nas motiviše da svakog dana budemo bolji. Njegova skromnost, strast i nepokolebljiva posvećenost našoj misiji čine ga ne samo liderom, već pokretačkom snagom našeg zajedničkog uspeha. Privilegija je biti deo organizacije koju vodi takav vizionar, čiji uticaj inspiriše svaki naš korak.">
+        
+        Naša kompanija nastavlja da raste i razvija se pod izvanrednim vođstvom gospodina Branka, čija su vizija i posvećenost oblikovali temelje svega za šta se zalažemo. Njegova sposobnost da razmišlja izvan sadašnjosti, predviđa buduće mogućnosti i inspiriše ljude jasnoćom i svrhom ne samo da je ojačala našu organizaciju, već je stvorila i kulturu u kojoj inovacije, timski rad i težnja ka izvrsnosti prirodno napreduju. Ono što njegovo liderstvo čini zaista izuzetnim jeste ravnoteža koju održava između strateškog donošenja odluka i iskrene ljudske povezanosti. He listens, understands, and empowers every team member to reach their fullest potential. Njegova snažna vera u kvalitet, etiku i dugoročni održivi rast odražava se u svakoj inicijativi i dostignuću naše kompanije. Rad pod njegovim vođstvom nije samo profesionalno iskustvo, već kontinuirano putovanje učenja koje nas motiviše da svakog dana budemo bolji. Njegova skromnost, strast i nepokolebljiva posvećenost našoj misiji čine ga ne samo liderom, već pokretačkom snagom našeg zajedničkog uspeha. Privilegija je biti deo organizacije koju vodi takav vizionar, čiji uticaj inspiriše svaki naš korak.
+      </p>
+
+      <p class="ceo-signature"
+         data-en="— With respect and gratitude, Team Cisto Mleko"
+         data-sr="— Sa poštovanjem i zahvalnošću, tim Cisto Mleko">
+        — Sa poštovanjem i zahvalnošću, tim Cisto Mleko
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <div class="stats-grid" data-animate="fade-in" style="margin-top:1.4rem;">
+    <div class="stat">
+      <div class="stat-number">1990</div>
+      <div class="stat-label" data-en="Established" data-sr="Osnovano">Osnovano</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-number">2200+</div>
+      <div class="stat-label" data-en="Workers" data-sr="Radnici">Radnici</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-number">1 Cr+</div>
+      <div class="stat-label" data-en="Foreign Business" data-sr="Međunarodni Posao">Međunarodni Posao</div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer id="contact" class="footer" style="margin-top:2rem; padding:2rem 0;">
@@ -247,16 +235,15 @@
               <circle cx="28" cy="22" r="1.5" fill="#0A1D37"/>
               <circle cx="36" cy="22" r="1.5" fill="#0A1D37"/>
             </svg>
-            <span class="logo-text">Siberian Pure</span>
+            <span class="logo-text">CistoMleko Pure</span>
           </div>
 
-          <p data-en="Bringing the purest taste of Siberian nature to your table since 1975."
-             data-ru="Приносим чистейший вкус сибирской природы к вашему столу с 1975 года.">
-            Bringing the purest taste of Siberian nature to your table since 1975.
+          <p data-en="Bringing the purest taste of CistoMleko nature to your table since 1975."
+             data-sr="Donosimo najčistiji ukus sibirske prirode na vaš sto od 1975.">
+            Donosimo najčistiji ukus sibirske prirode na vaš sto od 1975.
           </p>
 
           <div class="social-links" style="display:flex; gap:.6rem; margin-top:.8rem;">
-            <!-- social icons -->
             <a href="#" class="social-icon" aria-label="Facebook (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
             <a href="#" class="social-icon" aria-label="Instagram (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
             <a href="#" class="social-icon" aria-label="Twitter (link)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
@@ -264,30 +251,30 @@
         </div>
 
         <div class="footer-links" style="flex:1 1 180px;">
-          <h4 data-en="Quick Links" data-ru="Быстрые Ссылки">Quick Links</h4>
+          <h4 data-en="Quick Links" data-sr="Brze Linkove">Brze Linkove</h4>
           <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
-            <li><a href="products.html" data-en="Products" data-ru="Продукты">Products</a></li>
-            <li><a href="ourstory.html" data-en="Our Story" data-ru="Наша История">Our Story</a></li>
-            <li><a href="contactus.html" data-en="Contact" data-ru="Контакт">Contact</a></li>
+            <li><a href="products.html" data-en="Products" data-sr="Proizvodi">Proizvodi</a></li>
+            <li><a href="ourstory.html" data-en="Our Story" data-sr="Naša Priča">Naša Priča</a></li>
+            <li><a href="contactus.html" data-en="Contact" data-sr="Kontakt">Kontakt</a></li>
           </ul>
         </div>
 
         <div class="footer-links" style="flex:1 1 180px;">
-          <h4 data-en="Products" data-ru="Продукты">Products</h4>
+          <h4 data-en="Products" data-sr="Proizvodi">Proizvodi</h4>
           <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
-            <li><a href="#" data-en="Fresh Milk" data-ru="Свежее Молоко">Fresh Milk</a></li>
-            <li><a href="#" data-en="Cheese" data-ru="Сыр">Cheese</a></li>
-            <li><a href="#" data-en="Yogurt" data-ru="Йогурт">Yogurt</a></li>
-            <li><a href="#" data-en="Butter" data-ru="Масло">Butter</a></li>
+            <li><a href="#" data-en="Fresh Milk" data-sr="Sveže Mleko">Sveže Mleko</a></li>
+            <li><a href="#" data-en="Cheese" data-sr="Sir">Sir</a></li>
+            <li><a href="#" data-en="Yogurt" data-sr="Jogurt">Jogurt</a></li>
+            <li><a href="#" data-en="Butter" data-sr="Maslac">Maslac</a></li>
           </ul>
         </div>
 
         <div class="footer-contact" style="flex:1 1 220px;">
-          <h4 data-en="Contact Us" data-ru="Свяжитесь с Нами">Contact Us</h4>
+          <h4 data-en="Contact Us" data-sr="Kontakt">Kontakt</h4>
           <ul style="list-style:none; padding:0; margin:0.5rem 0 0 0;">
             <li style="display:flex; gap:.5rem; align-items:center;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span data-en="Siberian Valley, Altai Region, Russia" data-ru="Сибирская Долина, Алтайский край, Россия">Siberian Valley, Altai Region, Russia</span>
+              <span data-en="Cara lraklija 52,11 040 Belgrade,serbia" data-sr="Cara lraklija 52,11 040 Belgrade,serbia">Cara lraklija 52,11 040 Belgrade,serbia</span>
             </li>
             <li style="display:flex; gap:.5rem; align-items:center; margin-top:.5rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -295,63 +282,55 @@
             </li>
             <li style="display:flex; gap:.5rem; align-items:center; margin-top:.5rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BC0EB" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>hello@siberianpure.com</span>
+              <span>info.cistomleko@gmail.com</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom" style="margin-top:1.4rem; text-align:left;">
-        <p data-en="© 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia."
-           data-ru="© 2025 Siberian Pure. Все права защищены. Сделано с ❤️ из Сибири.">
-          © 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia.
+        <p data-en="© 2004 CistoMleko. All rights reserved. Made with ❤️ from CistoMleko."
+           data-sr="© 2004 CistoMleko. Sva prava zadržana. Napravljeno sa ❤️ iz Sibira.">
+          © 2004 CistoMleko. Sva prava zadržana. Napravljeno sa ❤️ iz Sibira.
         </p>
       </div>
     </div>
   </footer>
 
+  <!-- LANGUAGE SCRIPT: default SR, toggle SR <-> EN -->
   <script>
-    // Simple bilingual system using data-en / data-ru attributes.
-    // Default language: English ('en')
-    let currentLang = 'en';
+    // default language = Serbian (sr)
+    let currentLang = 'sr';
 
     function applyLanguage() {
       document.querySelectorAll('[data-en]').forEach(el => {
-        // Preserve HTML tags inside data attributes (like <strong>)
-        const key = 'data-' + currentLang;
-        const val = el.getAttribute(key);
-        if (val !== null) {
-          // If the attribute contains HTML tags, set innerHTML; otherwise set textContent
-          // Use a small heuristic: if it contains '<' treat as HTML
-          if (val.includes('<')) {
-            el.innerHTML = val;
-          } else {
-            el.textContent = val;
-          }
-        }
+        // prefer the chosen language attribute (data-sr / data-en)
+        const attr = 'data-' + currentLang;
+        const val = el.getAttribute(attr);
+        if (val === null) return;
+        // preserve HTML tags inside the attribute
+        if (val.includes('<')) el.innerHTML = val;
+        else el.textContent = val;
       });
 
-      // Update lang attribute for accessibility
+      // set html lang
       document.documentElement.lang = currentLang;
 
-      // Update toggle button label: show RU when current is EN, show EN when current is RU
+      // desktop toggle label: show EN when current is sr, else show SR
       const btn = document.getElementById('lang-toggle');
-      if (btn) {
-        btn.textContent = currentLang === 'en' ? 'РУ' : 'EN';
-        btn.setAttribute('aria-pressed', currentLang === 'ru' ? 'true' : 'false');
-      }
+      if (btn) btn.textContent = currentLang === 'sr' ? 'EN' : 'SR';
     }
 
     function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'ru' : 'en';
+      currentLang = currentLang === 'sr' ? 'en' : 'sr';
       applyLanguage();
     }
 
-    // Initialize on load
     document.addEventListener('DOMContentLoaded', () => {
+      // initialize to default Serbian visible
       applyLanguage();
 
-      // Intersection animation placeholders (keeps your original behavior)
+      // intersection animations (original behavior preserved)
       const animateElements = document.querySelectorAll('[data-animate]');
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(entries => {
@@ -364,10 +343,32 @@
         }, { threshold: 0.2 });
         animateElements.forEach(el => observer.observe(el));
       } else {
-        // fallback: just add class
         animateElements.forEach(el => el.classList.add('active'));
       }
     });
   </script>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+    const mobileBtn = document.getElementById("mobileMenuBtn");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    const mobileClose = document.getElementById("mobileMenuClose");
+
+    if (mobileBtn && mobilePanel && mobileClose) {
+      mobileBtn.addEventListener("click", () => {
+        mobilePanel.classList.add("open");
+        mobilePanel.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden"; // prevent scrolling when menu open
+      });
+
+      mobileClose.addEventListener("click", () => {
+        mobilePanel.classList.remove("open");
+        mobilePanel.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = ""; // restore scrolling
+      });
+    }
+  });
+  </script>
+
 </body>
 </html>

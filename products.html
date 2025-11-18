@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siberian Pure - Our Products</title>
+  <title data-en="CistoMleko Pure - Our Products" data-sr="CistoMleko Pure - Naši Proizvodi">CistoMleko Pure - Naši Proizvodi</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,68 +15,68 @@
   <!-- Header -->
   <header class="header">
     <nav class="nav">
-      <div class="logo">
-                
+      <div class="logo">       
         <a href="index.html" class="logo">
-  <img src="images/logo1.png" alt="Siberian Pure Logo" style="height: 120px;">
-</a>
+          <img src="images/logo1.png" alt="CistoMleko Pure Logo" style="height: 120px;">
+        </a>
       </div>
       <div class="nav-links">
-          <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="ourstory.html">Our Story</a>
-        <a href="contactus.html">Contact</a>
-        <button class="language-toggle" id="lang-toggle" onclick="toggleLanguage()">РУ/ EN</button>
+          <a href="index.html" data-en="Home" data-sr="Početna">Home</a>
+        <a href="products.html" data-en="Products" data-sr="Proizvodi">Products</a>
+        <a href="ourstory.html" data-en="Our Story" data-sr="Naša Priča">Our Story</a>
+        <a href="contactus.html" data-en="Contact" data-sr="Kontakt">Contact</a>
+        <button class="language-toggle" id="lang-toggle" onclick="toggleLanguage()">SR/EN</button>
       </div>
     </nav>
+    <!-- Mobile menu button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰ Menu</button>
+     <!-- Mobile menu panel -->
+    <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+      <button id="mobileMenuClose" aria-label="Close menu">✕</button>
+      <a href="index.html" data-en="Home" data-sr="Početna">Home</a>
+      <a href="products.html" data-en="Products" data-sr="Proizvodi">Products</a>
+      <a href="ourstory.html" data-en="Our Story" data-sr="Naša Priča">Our Story</a>
+      <a href="contactus.html" data-en="Contact" data-sr="Kontakt">Contact</a>
+      <button class="language-toggle" onclick="toggleLanguage()">SR/EN</button>
+    </nav>
   </header>
+
 <!-- Categories Section -->
- <section class="categories-section">
+<section class="categories-section">
   <div class="container">
-
-    <h2 data-en="EXPLORE OUR CATEGORIES" data-ru="ИССЛЕДУЙТЕ НАШИ КАТЕГОРИИ">
-      EXPLORE OUR CATEGORIES
-    </h2>
-
+    <h2 data-en="EXPLORE OUR CATEGORIES" data-sr="ISTRAŽITE NAŠE KATEGORIJE">EXPLORE OUR CATEGORIES</h2>
     <p data-en="Choose a category to explore our range of nutritious and delicious dairy products."
-       data-ru="Выберите категорию, чтобы изучить наш ассортимент полезных и вкусных молочных продуктов.">
+       data-sr="Izaberite kategoriju da istražite naš asortiman hranljivih i ukusnih mlečnih proizvoda.">
       Choose a category to explore our range of nutritious and delicious dairy products.
     </p>
 
     <div class="categories-grid">
-
       <a href="milkbased.html" class="category-card">
         <img src="https://i.ibb.co/5Wp0Myw7/jagoda-kondratiuk-s-De-Gl-MAwc-H4-unsplash.jpg">
-        <h3 data-en="Milk Based Products" data-ru="Молочная Продукция">Milk Based Products</h3>
+        <h3 data-en="Milk Based Products" data-sr="Mlečni Proizvodi">Milk Based Products</h3>
       </a>
 
       <a href="dryproducts.html" class="category-card">
         <img src="https://i.ibb.co/ycZNHMM3/caroline-badran-Uv-Zi-Eu43tc-Q-unsplash.jpg">
-        <h3 data-en="Dry Products" data-ru="Сухие Продукты">Dry Products</h3>
+        <h3 data-en="Dry Products" data-sr="Suvi Proizvodi">Dry Products</h3>
       </a>
 
       <a href="deliciousproducts.html" class="category-card">
         <img src="https://i.ibb.co/F4VmhbTn/debby-hudson-U-O9-DCDI4-E8-unsplash.jpg">
-        <h3 data-en="Delicious Products" data-ru="Вкусная Продукция">Delicious Products</h3>
+        <h3 data-en="Delicious Products" data-sr="Ukusni Proizvodi">Delicious Products</h3>
       </a>
-
     </div>
   </div>
 </section>
 
-       
-   
+<!-- Products Section -->
 <section class="products-section">
   <div class="container">
-
     <div class="section-header">
-      <h2 data-en="OUR PREMIUM PRODUCTS" data-ru="НАША ПРЕМИАЛЬНАЯ ПРОДУКЦИЯ">
-        OUR PREMIUM PRODUCTS
-      </h2>
-
-      <p data-en="Explore our range of dairy products, crafted with care in Siberia’s purest pastures."
-         data-ru="Ознакомьтесь с нашим ассортиментом молочных продуктов, созданных с заботой на чистейших пастбищах Сибири.">
-        Explore our range of dairy products, crafted with care in Siberia’s purest pastures.
+      <h2 data-en="OUR PREMIUM PRODUCTS" data-sr="NAŠI PREMIUM PROIZVODI">OUR PREMIUM PRODUCTS</h2>
+      <p data-en="Explore our range of dairy products, crafted with care in CistoMleko’s purest pastures."
+         data-sr="Istražite naš asortiman mlečnih proizvoda, izrađenih sa pažnjom na najčistijim sibirskim pašnjacima.">
+        Explore our range of dairy products, crafted with care in CistoMleko’s purest pastures.
       </p>
     </div>
 
@@ -87,10 +87,11 @@
           <img src="https://i.ibb.co/rR1J8wVR/sandi-benedicta-8-Pp9-M13xuzs-unsplash.jpg">
         </div>
         <div class="product-content">
-          <h3 data-en="Premium Fresh Milk" data-ru="Премиальное Свежeе Молоко">Premium Fresh Milk</h3>
-          <p data-en="Pure, nutrient-rich milk straight from Siberian farms."
-             data-ru="Чистое, питательное молоко прямо с сибирских ферм.">
-             Pure, nutrient-rich milk straight from Siberian farms.</p>
+          <h3 data-en="Premium Fresh Milk" data-sr="Premium Sveže Mleko">Premium Fresh Milk</h3>
+          <p data-en="Pure, nutrient-rich milk straight from CistoMleko farms."
+             data-sr="Čisto, hranljivo mleko direktno sa sibirskih farmi.">
+             Pure, nutrient-rich milk straight from CistoMleko farms.
+          </p>
         </div>
       </div>
 
@@ -99,10 +100,11 @@
           <img src="https://i.ibb.co/93CskDCM/cheese.jpg">
         </div>
         <div class="product-content">
-          <h3 data-en="Artisan Cheese" data-ru="Ремесленный Сыр">Artisan Cheese</h3>
+          <h3 data-en="Artisan Cheese" data-sr="Umetnički Sir">Artisan Cheese</h3>
           <p data-en="Crafted with traditional methods for rich, bold flavor."
-             data-ru="Изготовлено по традиционным методам для насыщенного вкуса.">
-             Crafted with traditional methods for rich, bold flavor.</p>
+             data-sr="Izrađeno tradicionalnim metodama za bogat i jak ukus.">
+             Crafted with traditional methods for rich, bold flavor.
+          </p>
         </div>
       </div>
 
@@ -111,10 +113,11 @@
           <img src="https://i.ibb.co/fzWsfLvh/tiard-Zt3-JBp-D6afg-unsplash.jpg">
         </div>
         <div class="product-content">
-          <h3 data-en="Creamy Yogurt" data-ru="Кремовый Йогурт">Creamy Yogurt</h3>
+          <h3 data-en="Creamy Yogurt" data-sr="Kremasti Jogurt">Creamy Yogurt</h3>
           <p data-en="Thick, probiotic-rich yogurt for everyday health."
-             data-ru="Густой, богатый пробиотиками йогурт для здоровья каждый день.">
-             Thick, probiotic-rich yogurt for everyday health.</p>
+             data-sr="Gust, bogat probioticima za svakodnevno zdravlje.">
+             Thick, probiotic-rich yogurt for everyday health.
+          </p>
         </div>
       </div>
 
@@ -123,10 +126,11 @@
           <img src="https://i.ibb.co/BVzf4sBj/tabita-princesia-YPc-z-AHXEqc-unsplash.jpg">
         </div>
         <div class="product-content">
-          <h3 data-en="Organic Butter" data-ru="Органическое Масло">Organic Butter</h3>
+          <h3 data-en="Organic Butter" data-sr="Organsko Maslo">Organic Butter</h3>
           <p data-en="Golden, creamy butter from grass-fed cows."
-             data-ru="Золотистое сливочное масло от коров на травяном откорме.">
-             Golden, creamy butter from grass-fed cows.</p>
+             data-sr="Zlatno, kremasto maslo od krava hranjenih travom.">
+             Golden, creamy butter from grass-fed cows.
+          </p>
         </div>
       </div>
 
@@ -134,203 +138,96 @@
   </div>
 </section>
 
-
 <!-- Footer -->
-  <!-- <footer id="contact" class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <img src="images/logo.png" alt="Siberian Pure Logo" style="height: 50px;">
-          </div>
-          <p>Bringing the purest taste of Siberian nature to your table since 1975.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="ourstory.html">About Us</a></li>
-            <li><a href="contactus.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="#">Fresh Milk</a></li>
-            <li><a href="#">Cheese</a></li>
-            <li><a href="#">Yogurt</a></li>
-            <li><a href="#">Butter</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>Siberian Valley, Altai Region, Russia</li>
-            <li>+7 (123) 456-7890</li>
-            <li>hello@siberianpure.com</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia.</p>
-      </div>
-    </div>
-  </footer> -->
-  <footer id="contact" class="footer">
+<footer id="contact" class="footer">
   <div class="container">
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <p data-en="Bringing the purest taste of Siberian nature to your table since 1975."
-           data-ru="Дарим чистейший вкус сибирской природы вашему столу с 1975 года.">
+        <p data-en="Bringing the purest taste of CistoMleko nature to your table since 1975."
+           data-sr="Dovodimo najčiši ukus sibirske prirode na vaš sto od 1975.">
           Bringing the purest taste...
         </p>
       </div>
 
       <div class="footer-links">
-        <h4 data-en="Quick Links" data-ru="Быстрые ссылки">Quick Links</h4>
+        <h4 data-en="Quick Links" data-sr="Brze Linkove">Quick Links</h4>
         <ul>
-          <li><a data-en="Products" data-ru="Продукция">Products</a></li>
-          <li><a data-en="About Us" data-ru="О нас">About Us</a></li>
-          <li><a data-en="Contact" data-ru="Контакты">Contact</a></li>
+          <li><a data-en="Products" data-sr="Proizvodi">Products</a></li>
+          <li><a data-en="About Us" data-sr="O Nama">About Us</a></li>
+          <li><a data-en="Contact" data-sr="Kontakt">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-links">
-        <h4 data-en="Products" data-ru="Продукция">Products</h4>
+        <h4 data-en="Products" data-sr="Proizvodi">Products</h4>
         <ul>
-          <li><a data-en="Fresh Milk" data-ru="Свежeе Молоко">Fresh Milk</a></li>
-          <li><a data-en="Cheese" data-ru="Сыр">Cheese</a></li>
-          <li><a data-en="Yogurt" data-ru="Йогурт">Yogurt</a></li>
-          <li><a data-en="Butter" data-ru="Масло">Butter</a></li>
+          <li><a data-en="Fresh Milk" data-sr="Sveže Mleko">Fresh Milk</a></li>
+          <li><a data-en="Cheese" data-sr="Sir">Cheese</a></li>
+          <li><a data-en="Yogurt" data-sr="Jogurt">Yogurt</a></li>
+          <li><a data-en="Butter" data-sr="Maslo">Butter</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
-        <h4 data-en="Contact Us" data-ru="Свяжитесь с нами">Contact Us</h4>
+        <h4 data-en="Contact Us" data-sr="Kontaktirajte Nas">Contact Us</h4>
         <ul>
-          <li data-en="Siberian Valley, Altai Region, Russia"
-              data-ru="Сибирская долина, Алтайский край, Россия">
-              Siberian Valley, Altai Region, Russia</li>
-
-          <li data-en="+7 (123) 456-7890" data-ru="+7 (123) 456-7890">+7 (123) 456-7890</li>
-
-          <li data-en="hello@siberianpure.com" data-ru="hello@siberianpure.com">
-            hello@siberianpure.com
+          <li data-en="Cara lraklija 52,11 040 Belgrade,serbia" data-sr="Cara lraklija 52,11 040 Beograd, srbija">
+           Cara lraklija 52,11 040 Belgrade,serbia
           </li>
+          <li data-en="+7 (123) 456-7890" data-sr="+7 (123) 456-7890">+7 (123) 456-7890</li>
+          <li data-en="hello@CistoMlekopure.com" data-sr="hello@CistoMlekopure.com">hello@CistoMlekopure.com</li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p data-en="© 2025 Siberian Pure. All rights reserved. Made with ❤️ from Siberia."
-         data-ru="© 2025 Siberian Pure. Все права защищены. Сделано с ❤️ в Сибири.">
-        © 2025 Siberian Pure. All rights reserved.
+      <p data-en="© 2004 CistoMleko Pure. All rights reserved. Made with ❤️ from CistoMleko."
+         data-sr="© 2004 CistoMleko Pure. Sva prava zadržana. Napravljeno sa ❤️ iz Sibira.">
+        © 2004 CistoMleko Pure. All rights reserved.
       </p>
     </div>
 
   </div>
 </footer>
 
-  <!-- <script>
-  let currentLang = 'en';
-
-  function toggleLanguage() {
-    // Determine the new language
-    const newLang = currentLang === 'en' ? 'ru' : 'en';
-
-    // Update main text content visibility
-    document.querySelectorAll('.english-text').forEach(el => {
-      el.classList.remove('active-lang');
-      if (newLang === 'en') {
-        el.classList.add('active-lang');
-      }
-    });
-
-    document.querySelectorAll('.russian-text').forEach(el => {
-      el.classList.remove('active-lang');
-      if (newLang === 'ru') {
-        el.classList.add('active-lang');
-      }
-    });
-
-    // Update navigation and quick links text based on data attributes
-    document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
-      // Only update links that have language data attributes
-      if (link.hasAttribute(`data-${newLang}`)) {
-        const langText = link.getAttribute(`data-${newLang}`);
-        link.textContent = langText;
-      }
-    });
-    
-    // Update the current language state
-    currentLang = newLang;
-    
-    // Set HTML lang attribute
-    document.documentElement.lang = newLang;
-  }
-  
-  // Initial animation script (kept from original code)
-  document.addEventListener("DOMContentLoaded", () => {
-    const animateElements = document.querySelectorAll("[data-animate]");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    animateElements.forEach(el => observer.observe(el));
-  });
-</script> -->
 <script>
-let currentLang = "en";
-
+let currentLang = "sr";
 function toggleLanguage() {
-    currentLang = currentLang === "en" ? "ru" : "en";
-
-    // Update ALL elements that have data-en/data-ru
+    currentLang = currentLang === "en" ? "sr" : "en";
     document.querySelectorAll("[data-en]").forEach(el => {
         el.textContent = el.getAttribute("data-" + currentLang);
     });
-
-    // Set page lang attribute
     document.documentElement.lang = currentLang;
-
-    // Update toggle button text
     document.getElementById("lang-toggle").textContent =
-        currentLang === "en" ? "РУ" : "EN";
+        currentLang === "en" ? "SR" : "EN";
 }
-
-// Set EN as default on page load
 document.addEventListener("DOMContentLoaded", () => {
     toggleLanguage();
-    toggleLanguage(); // EN default
+    toggleLanguage(); // default SR
+});
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const mobileBtn = document.getElementById("mobileMenuBtn");
+  const mobilePanel = document.getElementById("mobileMenuPanel");
+  const mobileClose = document.getElementById("mobileMenuClose");
+
+  if (mobileBtn && mobilePanel && mobileClose) {
+    mobileBtn.addEventListener("click", () => {
+      mobilePanel.classList.add("open");
+      mobilePanel.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "";
+    });
+
+    mobileClose.addEventListener("click", () => {
+      mobilePanel.classList.remove("open");
+      mobilePanel.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    });
+  }
 });
 </script>
 
