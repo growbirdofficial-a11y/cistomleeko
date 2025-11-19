@@ -100,32 +100,6 @@
       background-color: #009ac7;
     }
 
-    /* ---------- Map Section ---------- */
-    .map-section {
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .map-section h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #0a1d37;
-    }
-
-    .map-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      max-width: 900px;
-      height: 400px;
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
     @media (max-width: 768px) {
       .contact-section {
         padding: 60px 5%;
@@ -158,8 +132,7 @@
           <a href="products.html" data-en="Products" data-sr="Proizvodi">Proizvodi</a>
           <a href="ourstory.html" data-en="Our Story" data-sr="Naša priča">Naša priča</a>
           <a href="contactus.html" class="active" data-en="Contact" data-sr="Kontakt">Kontakt</a>
-          <a href="careers.html"  data-en="Careers" data-sr="karijere">karijere</a>
-
+          <a href="careers.html" data-en="Careers" data-sr="karijere">karijere</a>
 
           <button class="language-toggle" id="lang-toggle" aria-pressed="true" onclick="toggleLanguage()">EN</button>
         </div>
@@ -191,9 +164,9 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h3 data-en="Get in Touch" data-sr="Kontaktirajte nas">Kontaktirajte nas</h3>
-        <p><strong data-en="Email" data-sr="Email" >Email:</strong> info.cistomleko@gmail.com </p>
+        <p><strong data-en="Email" data-sr="Email">Email:</strong> info.cistomleko@gmail.com </p>
         <p><strong data-en="Telephone" data-sr="Telefon">Telefon:</strong> +7 495 123 4567</p>
-        <p><strong data-en="Address" data-sr="Telefon">Adresa:</strong> Cara lraklija 52,11 040 Belgrade,serbia</p>
+        <p><strong data-en="Address" data-sr="Adresa">Adresa:</strong> Cara lraklija 52,11 040 Belgrade,serbia</p>
       </div>
 
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
@@ -202,6 +175,7 @@
         <input type="text" name="name" placeholder="Vaše ime" required />
         <input type="email" name="email" placeholder="Vaš email" required />
         <input type="tel" name="phone" placeholder="Telefon" required />
+
         <select name="country" required>
           <option value="" disabled selected data-en="Select Country" data-sr="Izaberite državu">Izaberite državu</option>
           <option value="Russia">Russia</option>
@@ -214,22 +188,11 @@
           <option value="Africa">Africa</option>
           <option value="Other">Other</option>
         </select>
+
         <textarea name="message" placeholder="Vaša poruka" rows="6" required></textarea>
+
         <button type="submit" class="btn-primary" data-en="Send Message" data-sr="Pošalji poruku">Pošalji poruku</button>
       </form>
-    </div>
-
-    <!-- Map Section -->
-    <div class="map-section">
-      <h3 data-en="Find Us Here" data-sr="Pronađite nas ovde">Pronađite nas ovde</h3>
-      <div class="map-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46307.140945319265!2d82.9239656!3d55.0282179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe56c49f24e5f%3A0x400c43213d0d1e0!2sNovosibirsk%2C%20Russia!5e0!3m2!1sen!2sin!4v1699970046200!5m2!1sen!2sin"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
     </div>
   </section>
 
@@ -331,5 +294,7 @@
     }
     document.addEventListener('DOMContentLoaded', applyLanguage);
   </script>
+
+ 
 </body>
 </html>

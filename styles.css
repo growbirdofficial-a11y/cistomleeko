@@ -38,6 +38,7 @@ body {
 }
 
 .hero {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   background: linear-gradient(135deg, #437c8f 0%, #69b7e4 50%, #226fa8 100%);
@@ -96,8 +97,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 0px auto;
+    /* max-width: 1280px;
+    margin: 0px auto; */
+     gap: 20px;
 }
 
 .logo {
@@ -1947,3 +1949,80 @@ ______________________________ */
     align-items: center;
   }
 }
+
+/* --- Fix: Reduce padding on small screens --- */
+@media (max-width: 768px) {
+    .container {
+        /* Reduce padding from 48px to a more mobile-friendly 15px */
+        padding: 0 15px;
+    }
+    
+    /* Also check the .header which has 48px padding */
+    .header {
+        padding: 24px 15px;
+    }
+    
+    /* The hero content section also has 48px padding */
+    .hero-content {
+        padding: 20px 15px 128px;
+    }
+}
+
+
+@media (max-width: 880px) {
+  .header .nav-links {
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end; /* right align */
+  }
+
+  .hero-text h1,
+ .header tagline{
+    text-align: left;
+  }
+}
+
+
+/* Hide mobile language toggle on desktop */
+#mobileLangToggle {
+    display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 880px) {
+    #mobileLangToggle {
+         display: block;
+    margin-top: -20px;      /* adjust position */
+    margin-right: 325px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+    
+    }
+
+      /* Remove it from header-right area */
+  .nav .nav-links #mobileLangToggle {
+    display: none !important;
+  }
+
+  /* Make header layout flow vertically */
+  .header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  /* Tagline spacing so button sits above it properly */
+  .tagline {
+    margin-top: 10px;
+  }
+}
+
+    /* Hide desktop language toggle on mobile */
+    #lang-toggle {
+        display: none;
+    }
+
